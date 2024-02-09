@@ -19,7 +19,7 @@ export default function landing() {
               </span>
             </div>
           </div>
-          <div className="flex justify-center pt-6">
+          <div className="flex justify-center pt-2">
             <Image
               className=""
               alt="hero logo"

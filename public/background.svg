@@ -1,0 +1,36 @@
+<svg width="1546" height="942" viewBox="0 0 1546 942" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.7" filter="url(#filter0_f_493_964)">
+<mask id="mask0_493_964" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="311" y="352" width="398" height="265">
+<rect x="716.488" y="599.313" width="397.983" height="254.348" rx="127.174" transform="rotate(176.49 716.488 599.313)" fill="#43F6E7"/>
+</mask>
+<g mask="url(#mask0_493_964)">
+<rect x="1167.12" y="578.685" width="901.947" height="266.015" transform="rotate(176.49 1167.12 578.685)" fill="#43F6E7"/>
+</g>
+<mask id="mask1_493_964" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="392" y="418" width="223" height="214">
+<rect x="620.536" y="623.729" width="221.528" height="211.665" rx="105.832" transform="rotate(176.49 620.536 623.729)" fill="#A873FF"/>
+</mask>
+<g mask="url(#mask1_493_964)">
+<rect x="871.487" y="614.172" width="502.048" height="221.374" transform="rotate(176.49 871.487 614.172)" fill="#A873FF"/>
+</g>
+<mask id="mask2_493_964" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="957" y="364" width="116" height="130">
+<rect x="1076.4" y="489.366" width="115.168" height="128.326" rx="57.5839" transform="rotate(176.49 1076.4 489.366)" fill="#4D11AF"/>
+</mask>
+<g mask="url(#mask2_493_964)">
+<rect x="1206.89" y="484.9" width="261.004" height="134.213" transform="rotate(176.49 1206.89 484.9)" fill="#4D11AF"/>
+</g>
+<mask id="mask3_493_964" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1033" y="311" width="76" height="85">
+<rect x="1110.78" y="392.678" width="74.8017" height="83.3482" rx="37.4009" transform="rotate(176.49 1110.78 392.678)" fill="#397CFF"/>
+</mask>
+<g mask="url(#mask3_493_964)">
+<rect x="1195.54" y="389.777" width="169.523" height="87.1715" transform="rotate(176.49 1195.54 389.777)" fill="#397CFF"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1175.96 456.659C1166.77 457.222 1159.08 453.859 1158.79 449.147L1157.92 434.926L1130.18 436.628C1120.99 437.191 1113.31 433.828 1113.02 429.116C1112.73 424.404 1119.95 420.127 1129.14 419.563L1156.87 417.862L1156 403.641C1155.71 398.929 1162.93 394.652 1172.12 394.088C1181.31 393.524 1189 396.887 1189.29 401.6L1190.16 415.82L1217.9 414.119C1227.09 413.555 1234.77 416.918 1235.06 421.63C1235.35 426.342 1228.13 430.619 1218.94 431.183L1191.21 432.885L1192.08 447.105C1192.37 451.818 1185.15 456.095 1175.96 456.659Z" fill="#6851FF"/>
+</g>
+<defs>
+<filter id="filter0_f_493_964" x="0.436157" y="0.917297" width="1545.42" height="940.884" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="155.394" result="effect1_foregroundBlur_493_964"/>
+</filter>
+</defs>
+</svg>

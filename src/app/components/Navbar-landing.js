@@ -48,17 +48,27 @@ function NavBar() {
               <ul className="h-screen md:h-auto items-center justify-center md:flex ">
                 <li className="pb-6 text-l font-josefin-regular text-black py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
                   <Link href="#about" onClick={() => setNavbar(!navbar)}>
-                    Expediente
+                    ¿Que es?
                   </Link>
                 </li>
                 <li className="pb-6 text-l font-josefin-regular text-black py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
                   <Link href="#about" onClick={() => setNavbar(!navbar)}>
-                    Calendario
+                    Funcionalidades
                   </Link>
                 </li>
                 <li className="pb-6 text-l font-josefin-regular text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
                   <Link href="#blog" onClick={() => setNavbar(!navbar)}>
-                    Especialistas
+                    Beneficios
+                  </Link>
+                </li>
+                <li className="pb-6 text-l font-josefin-regular text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                  <Link href="#contact" onClick={() => setNavbar(!navbar)}>
+                    Inicia Sesion
+                  </Link>
+                </li>
+                <li className="pb-6 text-l font-josefin-regular text-white py-2 px-6 text-center bg-violetVitalli border-b-2 md:border-b-0 hover:border-purple hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                  <Link href="#projects" onClick={() => setNavbar(!navbar)}>
+                    Registrate
                   </Link>
                 </li>
               </ul>
@@ -69,3 +79,5 @@ function NavBar() {
     </div>
   );
 }
+
+export default NavBar;

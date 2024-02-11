@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <React.Fragment>
-      <main className="mt-6">
+      <main className="mt-28">
         <div className="title-hero">
           <div className="font-josefin-regular text-2xl font-extrabold flex justify-center px-8">
             <p className="">Descubre</p>

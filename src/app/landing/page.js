@@ -6,6 +6,7 @@ import HeroSection from "../components/landing-components/HeroSection";
 import NavbarLan from "../components/landing-components/Navbar-landing";
 import Footer from "../components/landing-components/Footer";
 import Functions from "../components/landing-components/Functions";
+import WhatInfo from "../components/landing-components/WhatInfo";
 
 export default function landing() {
   return (
@@ -13,6 +14,7 @@ export default function landing() {
       <div className="w-80">
         <NavbarLan/>
         <HeroSection />
+        <WhatInfo/>
         <Functions/>
         <Benefits />
         <Footer/>

@@ -5,9 +5,9 @@ export default function Benefits() {
     <React.Fragment>
       <section>
         <div className="flex justify-center">
-          <p className="font-josefin-regular font-bold text-[#6F2ADF]">
+          <h2 className="font-josefin-regular font-bold text-[#6F2ADF]">
             Beneficios
-          </p>
+          </h2>
         </div>
 
         <div className="mt-6 mr-4 flex justify-end font-lato-regular">

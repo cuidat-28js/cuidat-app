@@ -4,7 +4,7 @@ export default function Benefits() {
   return (
     <React.Fragment>
       <section>
-        <div className="flex mt-6 justify-center">
+        <div className="flex mt-24 text-xl justify-center">
           <h2 className="font-josefin-regular font-bold text-[#6F2ADF]">
             Beneficios
           </h2>

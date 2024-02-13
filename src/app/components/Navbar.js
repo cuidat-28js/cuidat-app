@@ -7,10 +7,10 @@ function NavBar() {
   const [navbar, setNavbar] = useState(false);
   return (
     <div>
-      <nav className="w-full bg-white fixed top-0 left-0 right-0 z-10">
-        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+      <nav className="shadow-lg shadow-[#E7E3FF] w-full bg-white fixed top-0 left-0 right-0 z-10">
+        <div className="justify-between px-2 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
-            <div className="flex items-center justify-between py-3 md:py-5 md:block">
+            <div className="flex items-center justify-between py-1 md:py-5 md:block">
               {/* LOGO */}
               <Link href="/" className='mt-0'>
                 <Image src="/logo-lg.svg" 
@@ -46,19 +46,29 @@ function NavBar() {
               }`}
             >
               <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-                <li className="pb-6 text-l font-josefin-regular text-black py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-2 text-l font-josefin-regular text-black py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:border-primary  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
                   <Link href="#about" onClick={() => setNavbar(!navbar)}>
                     Expediente
                   </Link>
                 </li>
-                <li className="pb-6 text-l font-josefin-regular text-black py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-62 text-l font-josefin-regular text-black py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
                   <Link href="#about" onClick={() => setNavbar(!navbar)}>
                     Calendario
                   </Link>
                 </li>
-                <li className="pb-6 text-l font-josefin-regular text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-2 text-l font-josefin-regular text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
                   <Link href="#blog" onClick={() => setNavbar(!navbar)}>
                     Especialistas
+                  </Link>
+                </li>
+                <li className="pb-2 text-l font-josefin-regular text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                  <Link href="#contact" onClick={() => setNavbar(!navbar)}>
+                    ¡Hola Jhon!
+                  </Link>
+                </li>
+                <li className="pb-2 text-l font-josefin-regular text-white py-2 px-6 text-center bg-violetVitalli rounded-full border-b-2 md:border-b-0 hover:border-purple hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                  <Link href="#projects" onClick={() => setNavbar(!navbar)}>
+                    JD
                   </Link>
                 </li>
               </ul>
@@ -69,3 +79,5 @@ function NavBar() {
     </div>
   );
 }
+
+export default NavBar;

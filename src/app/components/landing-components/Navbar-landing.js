@@ -66,7 +66,7 @@ function NavBar() {
                     Inicia Sesion
                   </Link>
                 </li>
-                <li className="pb-2 text-l font-josefin-regular text-white py-2 px-6 text-center bg-violetVitalli border-b-2 md:border-b-0 hover:border-purple hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-2 text-l font-josefin-regular text-white py-2 px-6 text-center bg-violetVitalli rounded-full border-b-2 md:border-b-0 hover:border-purple hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
                   <Link href="#projects" onClick={() => setNavbar(!navbar)}>
                     Registrate
                   </Link>

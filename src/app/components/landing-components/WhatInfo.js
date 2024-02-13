@@ -3,45 +3,49 @@ import React from "react";
 export default function WhatInfo() {
   return (
     <React.Fragment>
-        <div className="flex justify-center mt-6">
+      <section>
+        <div className="flex justify-center mt-24 font-xl">
           <h2 className="font-josefin-regular font-bold text-[#6F2ADF]">
-            ¿Para qué es?
+            ¿Qué te ofrecemos?
           </h2>
         </div>
 
         <div className="mt-6 mr-4 flex justify-end font-lato-regular">
-          <div className="card shadow-xl w-75 bg-white text-[#4D3AC9] flex-row">
+          <div className="card shadow-md w-64 bg-white text-[#4D11AF] flex-row">
             <div className="card-body">
               <p>
-              Para ayudarte a alcanzar tus<br></br>metas de bienestar nuestro
-              <br></br>compromiso es brindarte las<br></br>herramientas que necesitas.
+                Ayudarte a alcanzar tus metas de bienestar; nuestro compromiso
+                es brindarte las herramientas necesarias.
               </p>
             </div>
           </div>
         </div>
 
         <div className="mt-6 ml-4 flex justify-start font-lato-regular">
-          <div className="card shadow-xl  w-64 bg-[#D0C9FF] text-[#4D3AC9] flex-row">
+          <div className="card shadow-md  w-64 bg-[#D0C9FF] text-[#4D11AF] flex-row">
             <div className="card-body ">
-              <p>Manten tu seguimiento<br></br>médica con registros de tus<br></br>citas y medicamentos.</p>
+              <p>
+                Manten tu seguimiento médico con registros de tus citas y
+                medicamentos.
+              </p>
             </div>
           </div>
         </div>
         <div className="mt-6 mr-4 flex justify-end font-lato-regular">
-          <div className="card shadow-xl w-46 bg-[#8573FF] text-white flex-row">
+          <div className="card shadow-md w-64 bg-[#9288D4] text-white flex-row">
             <div className="card-body">
-              <p>Sin costos ocultos<br></br>ni mensualidades,<br></br>completamente gratis!</p>
+              <p>Sin costos ocultos ni mensualidades, completamente gratis!</p>
             </div>
           </div>
         </div>
         <div className="mt-6 ml-4 flex justify-start font-lato-regular">
-          <div className="card shadow-xl w-45 bg-primary text-white text-bold flex-row">
+          <div className="card shadow-md w-64 bg-[#6851FF] text-white text-bold flex-row">
             <div className="card-body">
-              <p>Tu salud, tu control,<br></br>tu camino!</p>
+              <p>Tu salud, tu control, tu camino!</p>
             </div>
           </div>
         </div>
+      </section>
     </React.Fragment>
   );
 }
-

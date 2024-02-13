@@ -32,14 +32,14 @@ export default function WhatInfo() {
           </div>
         </div>
         <div className="mt-6 mr-4 flex justify-end font-lato-regular">
-          <div className="card shadow-md w-64 bg-[#9288D4] text-white flex-row">
+          <div className="card shadow-md w-56 bg-[#9288D4] text-white flex-row">
             <div className="card-body">
               <p>Sin costos ocultos ni mensualidades, completamente gratis!</p>
             </div>
           </div>
         </div>
         <div className="mt-6 ml-4 flex justify-start font-lato-regular">
-          <div className="card shadow-md w-64 bg-[#6851FF] text-white text-bold flex-row">
+          <div className="card shadow-md w-52 bg-[#6851FF] text-white text-bold flex-row">
             <div className="card-body">
               <p>Tu salud, tu control, tu camino!</p>
             </div>

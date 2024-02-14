@@ -1,4 +1,4 @@
-import Form from "@/app/components/login-components/Form";
+import Form from "@/app/components/login-components/Form.js";
 
 export default function login() {
   return (

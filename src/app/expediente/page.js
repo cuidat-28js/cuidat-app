@@ -14,7 +14,8 @@ export default function Expediente() {
                      editar
                 </button>
             </div>
-            <div>
+            <div className="lg:flex w-96:block">
+                <div className="block firstRow">
                 <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-0 border-r-0">
                     <div className="w-96 p-4 m-2">
                         <div className="flex">
@@ -60,6 +61,8 @@ export default function Expediente() {
                         </p>
                      </div>
                 </section>
+                </div>
+                <div className="block secondRow">
                 <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-0 border-r-0">
                     <div className="w-96 p-4 m-2">
                         <div className="flex">
@@ -75,6 +78,37 @@ export default function Expediente() {
                         </p>
                      </div>
                 </section>
+                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-0 border-r-0">
+                    <div className="w-96 p-4 m-2">
+                        <div className="flex">
+                            <h5 className="mb-2 block font-semibold">
+                            Titulo
+                            </h5>
+                            <div className="m-0 justify-self-end">
+                                <AddBtn/>
+                            </div>
+                        </div>
+                        <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                        Placeholder
+                        </p>
+                     </div>
+                </section>
+                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-0 border-r-0">
+                    <div className="w-96 p-4 m-2">
+                        <div className="flex">
+                            <h5 className="mb-2 block font-semibold">
+                            Titulo
+                            </h5>
+                            <div className="m-0 justify-self-end">
+                                <AddBtn/>
+                            </div>
+                        </div>
+                        <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                        Placeholder
+                        </p>
+                     </div>
+                </section>
+                </div>
             </div>
         </main>
     )

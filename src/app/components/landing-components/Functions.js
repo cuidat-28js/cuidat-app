@@ -5,7 +5,7 @@ export default function Functions() {
   return (
     <React.Fragment>
       <section>
-        <div className="justify-center mt-24">
+        <div className="justify-center mt-28">
           <h2 className="font-josefin-regular text-xl text-center font-bold text-[#6F2ADF]">
             Funcionalidades
           </h2>

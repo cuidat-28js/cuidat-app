@@ -4,7 +4,7 @@ export default function WhatInfo() {
   return (
     <React.Fragment>
       <section>
-        <div className="flex justify-center mt-24 font-xl">
+        <div className="flex justify-center mt-20 font-xl">
           <h2 className="font-josefin-regular font-bold text-[#6F2ADF]">
             ¿Qué te ofrecemos?
           </h2>

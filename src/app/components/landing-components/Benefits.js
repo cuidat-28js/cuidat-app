@@ -3,8 +3,8 @@ import React from "react";
 export default function Benefits() {
   return (
     <React.Fragment>
-      <section>
-        <div className="flex mt-24 text-xl justify-center">
+      <section className="mb-20">
+        <div className="flex mt-20 text-xl justify-center">
           <h2 className="font-josefin-regular font-bold text-[#6F2ADF]">
             Beneficios
           </h2>

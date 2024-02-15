@@ -36,7 +36,7 @@ export default function Home() {
           </div>
           <div className="justify-center rounded-lg justify-center shadow bg-[#F9F9F9] p-3">
               <Image src="/ilustrations/doctora-record.svg"
-                width={300}
+                width={200}
                 height={200}/>
               <p className="mb-1">
                 Aun no tienes registros de citas

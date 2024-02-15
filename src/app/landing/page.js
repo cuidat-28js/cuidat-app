@@ -12,7 +12,7 @@ import ButtonLogin from "../components/landing-components/Button-login";
 export default function landing() {
   return (
     <React.Fragment>
-      <div className="w-80">
+      <div>
         <NavbarLan/>
         <HeroSection />
         <ButtonLogin/>

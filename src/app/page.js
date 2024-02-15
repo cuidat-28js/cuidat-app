@@ -35,7 +35,7 @@ export default function Home() {
             </button>
           </div>
           <div className="justify-center rounded-lg justify-center shadow bg-[#F9F9F9] p-3">
-              <Image src="/no-citas-pic.svg"
+              <Image src="/ilustrations/doctora-record.svg"
                 width={300}
                 height={200}/>
               <p className="mb-1">

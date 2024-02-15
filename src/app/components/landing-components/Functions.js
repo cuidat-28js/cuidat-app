@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Functions() {
   return (
     <React.Fragment>
-      <section>
+      <section className="min-w-80 md:flex md:justify-center">
         <div className="justify-center mt-28">
           <h2 className="font-josefin-regular text-xl text-center font-bold text-[#6F2ADF]">
             Funcionalidades
@@ -17,7 +17,7 @@ export default function Functions() {
                   <p className="card-title text-base text-[#4D11AF]">
                     Agenda para citas
                   </p>
-                  <p>
+                  <p className="">
                     Puedes registrar tus citas al medico y avances sobre tu
                     salud.
                   </p>

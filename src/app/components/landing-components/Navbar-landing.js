@@ -49,7 +49,7 @@ function NavBar() {
                 navbar ? "p-12 md:p-0 block" : "hidden"
               }`}
             >
-              <ul className="h-screen md:h-auto items-center justify-start md:flex ">
+              <ul className="h-screen md:h-auto items-center justify-center md:flex ">
                 <li className="pb-2  font-lato-regular text-black py-2 hover:text-violetVitalli hover:font-bold md:px-6 text-center md:border-b-0 md:hover:text-violetVitalli md:hover:bg-transparent md:hover:font-bold md:text-xs lg:text-lg">
                   <Link href="#about" onClick={() => setNavbar(!navbar)}>
                     ¿Que ofrecemos?

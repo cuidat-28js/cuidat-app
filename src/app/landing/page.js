@@ -13,13 +13,13 @@ export default function landing() {
   return (
     <React.Fragment>
       <div>
-        <NavbarLan/>
+        <NavbarLan />
         <HeroSection />
-        <ButtonLogin/>
-        <WhatInfo/>
-        <Functions/>
+        <ButtonLogin />
+        <WhatInfo />
+        <Functions />
         <Benefits />
-        <Footer/>
+        <Footer />
       </div>
     </React.Fragment>
   );

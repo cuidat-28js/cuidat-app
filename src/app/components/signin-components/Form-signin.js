@@ -16,16 +16,16 @@ export default function FormSignin() {
             </p>
             <div className="mt-8">
                 <div>
-                    <label htmlFor="email" className="text-lg font-medium">
+                    <label htmlFor="signin-email" className="text-lg font-medium">
                         Correo electrónico
                     </label>
-                    <input type="email" className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent" placeholder="Ingresa tu correo electrónico" {...register("email")}/>
+                    <input id="signin-email" type="email" className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent" placeholder="Ingresa tu correo electrónico" {...register("email")}/>
                 </div>
                 <div>
-                    <label htmlFor="password" className="text-lg font-medium">
+                    <label htmlFor="signin-password" className="text-lg font-medium">
                         Contraseña
                     </label>
-                    <input type="password" className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent" placeholder="Crea tu contraseña" {...register("password")}/>
+                    <input id="signin-password" type="password" className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent" placeholder="Crea tu contraseña" {...register("password")}/>
                 </div>
                 <div className="mt-8 flex flex-col gap-y-4">
                     <button type="submit" className="active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all py-3 rounded-xl bg-violet-500 text-white text-lg font-bold">¡Registrarme!</button>

@@ -3,11 +3,13 @@ import Image from "next/image";
 import Navbar from "./components/Navbar"
 import Footer from "./components/landing-components/Footer";
 import AddBtn from "./components/Add-button";
+import Reminder from "./components/Reminder";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen w-96 flex-col items-center justify-between p-50">
       <Navbar/>
+      <Reminder/>
       <div className=" max-w-5xl w-full items-center justify-between font-lato text-sm lg:flex sm:block">
         <div className="reminders m-4">
           <h3 className="font-josefin-regular text-center bold">Recordatorios</h3>

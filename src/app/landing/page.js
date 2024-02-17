@@ -7,17 +7,19 @@ import NavbarLan from "../components/landing-components/Navbar-landing";
 import Footer from "../components/landing-components/Footer";
 import Functions from "../components/landing-components/Functions";
 import WhatInfo from "../components/landing-components/WhatInfo";
+import ButtonLogin from "../components/landing-components/Button-login";
 
 export default function landing() {
   return (
     <React.Fragment>
-      <div className="w-80">
-        <NavbarLan/>
+      <div>
+        <NavbarLan />
         <HeroSection />
-        <WhatInfo/>
-        <Functions/>
+        <ButtonLogin />
+        <WhatInfo />
+        <Functions />
         <Benefits />
-        <Footer/>
+        <Footer />
       </div>
     </React.Fragment>
   );

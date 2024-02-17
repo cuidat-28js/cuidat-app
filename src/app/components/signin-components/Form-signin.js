@@ -29,8 +29,8 @@ export default function FormSignin() {
                         type="email"
                         className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                         placeholder="Ingresa tu correo electrónico"
-                        {...register("email", { required: 'Éste campo es obligatorio'})}/>
-                        <p>{ errors.email?.message }</p>
+                        {...register("email", { required: '*Éste campo es obligatorio'})}/>
+                        <p className="text-[12px] text-red-600">{ errors.email?.message }</p>
                 </div>
                 <div>
                     <label htmlFor="signin-password" className="text-lg font-medium">
@@ -41,8 +41,8 @@ export default function FormSignin() {
                         type="password"
                         className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                         placeholder="Crea tu contraseña"
-                        {...register("password", { required: 'Éste campo es obligatorio', minLength: { value: 8, message: 'Tu contraseña debe tener al menos 8 caracteres'}})}/>
-                        <p>{ errors.password?.message }</p>
+                        {...register("password", { required: 'Éste campo es obligatorio', minLength: { value: 8, message: '*Tu contraseña debe tener al menos 8 caracteres'}})}/>
+                        <p className="text-[12px] text-red-600">{ errors.password?.message }</p>
                 </div>
                 <div className="mt-8 flex flex-col gap-y-4">
                     <button type="submit" className="active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all py-3 rounded-xl bg-violet-500 text-white text-lg font-bold">¡Registrarme!</button>

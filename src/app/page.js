@@ -5,21 +5,9 @@ import Footer from "./components/landing-components/Footer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen w-96 flex-col items-center justify-between p-50">
+    <main className="flex min-h-screen w-96 lg:w-full flex-col items-center justify-between p-50">
       <Navbar/>
-      <div className=" max-w-5xl w-full items-center justify-between font-lato text-sm lg:flex sm:block">
-        <div className="reminders m-4">
-          <h3 className="font-josefin-regular text-center bold">Recordatorios</h3>
-            <div className="block rounded-lg shadow bg-[#F9F9F9] p-3">
-              <p className="mb-1">
-                Aun no tienes recordatorios
-              </p>
-              <button type="button"
-                className="inline-block rounded bg-primary px-6 pb-1 pt-1 text-xs font-medium uppercase leading-normal text-white"
-               >
-                Crear Recordatorio</button>
-            </div>
-        </div>
+      <div>
         <div className="apointments m-4">
           <div className="m-2 md:m-6 flex">
             <h3 className="font-josefin-regular text-lg mt-2 mr-2">Citas</h3>

@@ -1,6 +1,8 @@
+import React from "react"
+
 export default function HomeRemind() {
     return (
-        <ReactDOM.Fragment>
+        <React.Fragment>
             <div className=" max-w-5xl w-full items-center justify-between font-lato text-sm lg:flex sm:block">
                 <div className="reminders m-4">
                     <h3 className="font-josefin-regular text-center bold">Recordatorios</h3>
@@ -15,6 +17,6 @@ export default function HomeRemind() {
                     </div>
                 </div>
                 </div>
-        </ReactDOM.Fragment>
+        </React.Fragment>
     )
 }

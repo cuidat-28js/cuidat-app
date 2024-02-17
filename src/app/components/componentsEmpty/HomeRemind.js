@@ -3,9 +3,9 @@ import React from "react"
 export default function HomeRemind() {
     return (
         <React.Fragment>
-            <div className=" max-w-5xl w-full items-center justify-between font-lato text-sm lg:flex sm:block">
-                <div className="reminders m-4">
-                    <h3 className="font-josefin-regular text-center bold">Recordatorios</h3>
+            <div>
+                <div className="reminders mx-4 mt-11">
+                    <h3 className="mt-4 font-josefin-regular text-center bold">Recordatorios</h3>
                     <div className="block rounded-lg shadow bg-[#F9F9F9] p-3">
                         <p className="mb-1">
                             Aun no tienes recordatorios

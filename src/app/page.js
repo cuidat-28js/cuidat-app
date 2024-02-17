@@ -7,7 +7,7 @@ import HomeDates from "./components/componentsEmpty/HomeDates";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen w-96 lg:w-full flex-col items-center justify-between p-50">
+    <main className="flex min-h-screen lg:w-full flex-col items-center justify-between">
       <Navbar/>
       <HomeRemind/>
       <HomeDates/>

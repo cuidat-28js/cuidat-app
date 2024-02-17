@@ -1,8 +1,16 @@
+"use client"
 import React from "react";
+import { useForm } from "react-hook-form"
 
 export default function FormLogin() {
+
+    const { register, handleSubmit, watch, formState: { errors },} = useForm()
+    // console.log(watch())
+
     return (
-        <div className="bg-white px-10 py-20 rounded-3xl border-gray-100">
+        <form 
+            onSubmit={handleSubmit((data) => {console.log(data)})}
+            className="bg-white px-10 py-20 rounded-3xl border-gray-100">
             <h1 className="text-5xl font-semibold">
                 ¡Bienvenido a VitaliApp!
             </h1>
@@ -11,16 +19,28 @@ export default function FormLogin() {
             </p>
             <div className="mt-8">
                 <div>
-                    <label className="text-lg font-medium">
+                    <label htmlFor="login-email" className="text-lg font-medium">
                         Correo electrónico
                     </label>
-                    <input className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent" placeholder="Ingresa tu correo electrónico"/>
+                    <input
+                        id="login-email"
+                        type="email"
+                        className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
+                        placeholder="Ingresa tu correo electrónico"
+                        {...register("email", { required: '*Éste campo es obligatorio'})}/>
+                        <p className="text-[12px] text-red-600">{ errors.email?.message }</p>
                 </div>
                 <div>
-                    <label className="text-lg font-medium">
+                    <label htmlFor="signin-password" className="text-lg font-medium">
                         Contraseña
                     </label>
-                    <input className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent" placeholder="Ingresa tu contraseña"/>
+                    <input
+                        id="signin-password"
+                        type="password"
+                        className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
+                        placeholder="Ingresa tu contraseña"
+                        {...register("password", { required: 'Éste campo es obligatorio'})}/>
+                        {/* cambiar el tipo de error al no coincidir la contraseña correcta <p className="text-[12px] text-red-600">{ errors.password?.message }</p> */}
                 </div>
                 <div className="mt-8 flex justify-between items-center">
                     <div>
@@ -50,6 +70,6 @@ export default function FormLogin() {
                     </button>
                 </div>
             </div>
-        </div>
+        </form>
     )
 }

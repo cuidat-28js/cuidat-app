@@ -60,5 +60,3 @@ export default function FormSignin() {
         </form>
     )
 }
-
-//proof

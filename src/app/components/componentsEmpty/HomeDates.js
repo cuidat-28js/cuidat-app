@@ -4,6 +4,7 @@ import Image from "next/image"
 export default function HomeDates() {
     return (
         <React.Fragment>
+            <div>
             <div className="m-2 flex">
                 <h3 className="font-josefin-regular text-lg mt-2 mr-2">Citas</h3>
                 <div className="pt-2 mx-auto text-gray-600">
@@ -31,6 +32,7 @@ export default function HomeDates() {
                     >
                     Crear cita</button>
                 </div>
+            </div>
         </React.Fragment>
     )
 }

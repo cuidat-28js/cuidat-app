@@ -1,59 +1,61 @@
 import React from "react";
 import NavBar from "../components/Navbar";
+import Footer from "../components/landing-components/Footer";
 
 export default function DateForm() {
     return(
-        <main className="flex lg:w-full flex-col items-center justify-between">
+        <div className="flex min-h-screen lg:w-full flex-col items-center justify-between">
         <NavBar/>
-            <form className="w-80 lg:w-300 border rounded pt-24 px-6">
-                <div>
+            <form className="md:w-1/3 flex flex-col w-80 border-2 rounded pt-6 items-center mt-20 bg-white">
+                <div className="mb-4">
                     <h1 className="font-josefin-regular text-xl">
                         Nueva Cita
                     </h1>
                 </div>
                 <div>
                     <div className="mb-2">
-                        <label for="large-input" class="block mb-2 text-sm font-medium text-primary">Titulo</label>
-                        <input type="text" id="inputTitle" class="block p-1.5 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
+                        <label for="large-input" className="block mb-2 text-sm font-medium text-primary">Titulo</label>
+                        <input type="text" id="title" className="block p-1 md:px-8 md:w-1/1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
                     </div>
                     <div className="mb-2">
-                        <label for="large-input" class="block mb-2 text-sm font-medium text-primary">Fecha</label>
-                        <input type="text" id="inputDate" class="block p-1.5 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
+                        <label for="large-input" className="block mb-2 text-sm font-medium text-primary">Fecha</label>
+                        <input type="text" id="date" className="block p-1 md:px-8 md:w-1/1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
                     </div>
                     <div className="mb-2">
-                        <label for="large-input" class="block mb-2 text-sm font-medium text-primary">Titulo</label>
-                        <input type="text" id="inputAdress" class="block p-1.5 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
+                        <label for="large-input" className="block mb-2 text-sm font-medium text-primary">Medico</label>
+                        <input type="text" id="doctor" className="block p-1 md:px-8 md:w-1/1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
                     </div>
                     <div className="mb-2">
-                        <label for="large-input" class="block mb-2 text-sm font-medium text-primary">Fecha</label>
-                        <input type="text" id="inputSintoma" class="block p-1.5 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
+                        <label for="large-input" className="block mb-2 text-sm font-medium text-primary">Direccion</label>
+                        <input type="text" id="adress" className="block p-1 md:px-8 md:w-1/1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
                     </div>
                     <div className="mb-2">
-                        <label for="large-input" class="block mb-2 text-sm font-medium text-primary">Fecha</label>
-                        <textarea type="text" id="inputDate" class="block p-1.5 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
+                        <label for="large-input" className="block mb-2 text-sm font-medium text-primary">Comentarios</label>
+                        <textarea type="text" id="comments" className="block p-1 md:px-8 md:w-1/1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
                     </div>
                 </div>    
-                <div className="flex flex-row">
+                <div className="flex flex-row p-2 mt-2">
                     <button
                     type="button"
-                    className="border-2 border-primary rounded text-primary text-xs btn-xs sm:btn-sm md:btn-md lg:btn-lg hover:bg-primary-500 hover:bg-opacity-10 hover:text-primary-600"
+                    className="m-2 border border-primary rounded text-xs btn-s sm:btn-sm md:btn-md hover:bg-primary-500 hover:bg-opacity-10 hover:text-primary-600"
                     >
                         Añadir evidencia
                     </button>
                     <button
                     type="button"
-                    className="border-2 border-primary rounded text-primary text-xs btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+                    className="m-2 border border-primary rounded text-xs btn-s sm:btn-sm md:btn-md"
                     >
                         Añadir recordatorio
                     </button>
                 </div>
-                <div>
+                <div className="mb-4">
                     <button id="formSave" type="submit" 
-                    className="btn btn-wide bg-primary text-white">
+                    className="rounded py-1 px-8 bg-primary text-white ">
                         GUARDAR
                     </button>
                 </div>
             </form>
-        </main>
+        <Footer/>
+        </div>
     )
 }

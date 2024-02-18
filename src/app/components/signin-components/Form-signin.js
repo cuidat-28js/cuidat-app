@@ -4,10 +4,15 @@ import { useForm } from "react-hook-form"
 
 export default function FormSignin() {
 
-    const { register, handleSubmit, formState: { errors },} = useForm()
+    const { register, handleSubmit, watch, formState: { errors },} = useForm()
+
+    // console.log(watch())
 
     return (
-        <form onSubmit={handleSubmit((data) => {console.log(data)})} className="bg-white px-10 py-20 rounded-3xl border-gray-100">
+        <form
+            onSubmit={handleSubmit((data) => {console.log(data)})}
+            className="bg-white px-10 py-20 rounded-3xl border-gray-100">
+
             <h1 className="text-5xl font-semibold">
                 ¡Bienvenido a VitaliApp!
             </h1>
@@ -19,13 +24,25 @@ export default function FormSignin() {
                     <label htmlFor="signin-email" className="text-lg font-medium">
                         Correo electrónico
                     </label>
-                    <input id="signin-email" type="email" className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent" placeholder="Ingresa tu correo electrónico" {...register("email")}/>
+                    <input
+                        id="signin-email"
+                        type="email"
+                        className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
+                        placeholder="Ingresa tu correo electrónico"
+                        {...register("email", { required: '*Éste campo es obligatorio'})}/>
+                        <p className="text-[12px] text-red-600">{ errors.email?.message }</p>
                 </div>
                 <div>
                     <label htmlFor="signin-password" className="text-lg font-medium">
                         Contraseña
                     </label>
-                    <input id="signin-password" type="password" className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent" placeholder="Crea tu contraseña" {...register("password")}/>
+                    <input
+                        id="signin-password"
+                        type="password"
+                        className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
+                        placeholder="Crea tu contraseña"
+                        {...register("password", { required: 'Éste campo es obligatorio', minLength: { value: 8, message: '*Tu contraseña debe tener al menos 8 caracteres'}})}/>
+                        <p className="text-[12px] text-red-600">{ errors.password?.message }</p>
                 </div>
                 <div className="mt-8 flex flex-col gap-y-4">
                     <button type="submit" className="active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all py-3 rounded-xl bg-violet-500 text-white text-lg font-bold">¡Registrarme!</button>

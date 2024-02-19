@@ -6,6 +6,7 @@ import HomeRemind from "./components/componentsEmpty/HomeRemind";
 import HomeDates from "./components/componentsEmpty/HomeDates";
 import Reminder from "./components/Reminder"
 import ProfileEmpty from "./components/componentsEmpty/ProfileEmpty";
+import CalendarCompon from "./components/Calendar";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <ProfileEmpty/>
         <HomeRemind/>
       </div>
+      <CalendarCompon/>
       <HomeDates/>
       </div>
       <Reminder/>

@@ -17,10 +17,8 @@ export default function Home() {
         <ProfileEmpty/>
         <HomeRemind/>
       </div>
-      <CalendarCompon/>
       <HomeDates/>
       </div>
-      <Reminder/>
       <Footer/>
     </main>
   );

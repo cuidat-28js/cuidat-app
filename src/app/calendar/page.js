@@ -1,30 +1,34 @@
 import CalendarCompon from "../components/Calendar"
 import Reminder from "../components/Reminder"
+import RemindersEmpty from "../components/componentsEmpty/ReminderEmpty"
+import NavBar from "../components/Navbar"
 
 export default function CalendarPage() {
     return (
-        <div className="flex min-h-screen lg:w-full flex-row items-center"> 
-            <div className="flex flex-row justify-center">
-                <div className="w-2/3 px-36 flex flex-col">
-                    <div className="p-4 border border-primary border-l-0 border-t-0 border-r-0">
-                    <h2>
+        <div className="flex min-h-screen lg:w-full flex-col items-center justify-between">
+            <NavBar/>
+            <div className="flex flex-col justify-centers lg:flex-row"> 
+                <div className="w-full flex flex-col mt-16 lg:m-4 ">
+                    <div className="object-top px-4 pb-4 border border-primary border-l-0 border-t-0 border-r-0">
+                        <h2 className="font-josefin-regular text-bold">
                         Recordatorios
-                    </h2>
+                        </h2>
                     </div>
-                <div>
-                    <section></section>
+                    <div className="mt-4">
+                        <section>
+                        <RemindersEmpty/>
+                        </section>
+                    </div>
                 </div>
-                </div>
-                <div className="flex flex-col items-center"> 
+                <div className="flex flex-col items-center my-4 mr-2"> 
                     <div className="mb-4">
-                    <CalendarCompon/>
+                        <CalendarCompon/>
                     </div>
                     <div>
-                     <Reminder/>
+                        <Reminder/>
                     </div>
                 </div>
             </div>
-            
         </div>
     )
 }

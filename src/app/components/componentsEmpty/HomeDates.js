@@ -20,7 +20,7 @@ export default function HomeDates() {
                 </button>
             </div>
                 </div>
-                <div className="rounded items-center shadow p-4 bg-[#F9F9F9]">
+                <div className="rounded flex flex-col items-center shadow p-1 bg-[#F9F9F9]">
                     <Image src="/ilustrations/doctora-record.svg"
                     width={200}
                     height={200}/>

@@ -7,7 +7,7 @@ export default function Reminder() {
                 <div className="ml-6 ">
                     <h2 className="text-bold">Añadir Recordatorio</h2>
                 </div>
-                <div className="flex flex-col md:flex-row">
+                <div className="flex flex-col md:flex-row pl-2">
                 <div className="w-56 my-4">
                     <div>
                         <div className="mb-2">
@@ -23,7 +23,7 @@ export default function Reminder() {
                         <button className="button rounded btn-active btn-block btn-primary text-sm">Añadir</button>
                     </div>
                 </div>
-                <div className="mx-4 flex flex-row">
+                <div className="ml-4 flex flex-row">
                     <div className="m-1 w-20">
                         <p className="mt-3 text-sm">Repetir</p>
                         <div className="flex flex-col">
@@ -47,7 +47,7 @@ export default function Reminder() {
                             </label>
                         </div>
                     </div>
-                    <div className="m-1 mb-1 mt-2 w-28">
+                    <div className="mb-1 mt-2 w-28">
                         <p className="mt-2 text-sm">
                             Notificación
                         </p>

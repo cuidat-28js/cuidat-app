@@ -19,7 +19,7 @@ export default function DateForm() {
                     </div>
                     <div className="mb-2">
                         <label for="large-input" className="block mb-2 text-sm font-medium text-primary">Fecha</label>
-                        <input type="text" id="date" className="block p-1 md:px-8 md:w-1/1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
+                        <input type="date" id="date" className="block p-1 md:px-8 md:w-1/1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
                     </div>
                     <div className="mb-2">
                         <label for="large-input" className="block mb-2 text-sm font-medium text-primary">Medico</label>

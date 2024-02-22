@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image"
+import AddBtn from "../Add-button";
 
 export default function HomeDates() {
     return (
@@ -11,13 +12,8 @@ export default function HomeDates() {
                     <input className="border-2 border-gray-300 bg-white h-8 px-5 pr-2 rounded-full text-sm focus:outline-none"
                     type="search" placeholder="Buscar"/>
                 </div>
-            <div>
-                <button
-                    type="button"
-                    class="ml-3 inline-block rounded border-2 border-primary px-3.5 pb-[6px] pt-2 text-lg leading-normal text-primary hover:border-3 hover:bg-primary hover:text-white"
-                    data-te-ripple-init>
-                    +
-                </button>
+            <div className="ml-2 mt-2">
+                <AddBtn/>
             </div>
                 </div>
                 <div className="rounded flex flex-col items-center shadow p-1 bg-[#F9F9F9]">

@@ -6,12 +6,9 @@ export default function AddBtn() {
         <div>
             <button
             type="button"
-            className="inline-block hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600"
+            className="btn btn-xs btn-outline border-primary text-primary text-md font-bold hover:bg-primary hover:-translate-y-1"
             >
-                <Image src="../public/ilustrations/add-btn.svg"
-                width={60}
-                height={60}
-                alt="plus sign button" />
+            +
             </button>
         </div>
     );

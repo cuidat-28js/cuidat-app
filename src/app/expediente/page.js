@@ -18,8 +18,8 @@ export default function Expediente() {
             </div>
             <div className="block items-center justify-center sm:flex pt-2 mb-2 w-80:block">
                 <div className=" m-2 firstRow">
-                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-0 border-r-0">
-                    <div className="w-96 p-4 m-2">
+                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-0 border-r-1">
+                    <div className="w-96 p-4 my-2">
                         <div className="flex w-full">
                             <h5 className="mb-2 block font-semibold">
                             Contacto de Emergencia
@@ -33,8 +33,8 @@ export default function Expediente() {
                         </p>
                      </div>
                 </section>
-                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-0 border-r-0">
-                    <div className="w-80 px-4 pb-2 m-2">
+                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-0 border-r-1">
+                    <div className="w-80 px-4 pb-2 my-4">
                         <div className="flex">
                             <h5 className="mb-2 block font-semibold">
                             Titulo
@@ -70,8 +70,8 @@ export default function Expediente() {
                         </div>
                      </div>
                 </section>
-                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-0 border-r-0">
-                    <div className="w-96 p-4 m-2">
+                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-0 border-r-1">
+                    <div className="w-96 p-4 my-2">
                         <div className="flex">
                             <h5 className="mb-2 pr-2 block font-semibold">
                             Alergias
@@ -85,8 +85,8 @@ export default function Expediente() {
                         </p>
                      </div>
                 </section>
-                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-0 border-r-0">
-                    <div className="w-96 p-4 m-2">
+                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-0 border-r-1">
+                    <div className="w-96 p-4 my-2">
                         <div className="flex">
                             <h5 className="mb-2 block font-semibold">
                             Antecedentes Familiares
@@ -102,8 +102,8 @@ export default function Expediente() {
                 </section>
                 </div> 
                 <div className="block m-2 secondtRow">
-                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-0 border-r-0">
-                    <div className="w-96 p-4 m-2">
+                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-1 border-r-0">
+                    <div className="w-96 p-4 my-2">
                         <div className="flex">
                             <h5 className="mb-2 block font-semibold">
                             Medicamentos controlados
@@ -117,8 +117,8 @@ export default function Expediente() {
                         </p>
                      </div>
                 </section>
-                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-0 border-r-0">
-                    <div className="w-96 p-4 m-2">
+                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-1 border-r-0">
+                    <div className="w-96 p-4 my-2">
                         <div className="flex">
                             <h5 className="mb-2 pr-2 block font-semibold">
                             Enfermedades Cronicas
@@ -132,8 +132,8 @@ export default function Expediente() {
                         </p>
                      </div>
                 </section>
-                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-0 border-r-0">
-                    <div className="w-96 p-4 m-2">
+                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-1 border-r-0">
+                    <div className="w-96 p-4 my-2">
                         <div className="flex">
                             <h5 className="mb-2 block font-semibold">
                             Enfermedades Cardiovasculares
@@ -147,8 +147,8 @@ export default function Expediente() {
                         </p>
                      </div>
                 </section>
-                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-0 border-r-0">
-                    <div className="w-96 p-4 m-2">
+                <section className="relative flex w-96 flex-col bg-white border border-primary border-b-2 border-t-0 border-l-1 border-r-0">
+                    <div className="w-96 p-4 my-2">
                         <div className="flex">
                             <h5 className="mb-2 block font-semibold">
                             Comentarios

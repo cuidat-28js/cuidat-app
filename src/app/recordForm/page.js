@@ -2,10 +2,10 @@ import React from "react"
 import Navbar from  "../components/Navbar"
 import AddBtn from "../components/Add-button"
 
-export default function RecordFunction() {
+export default function RecordForm() {
     return (
-        <div id="recordForm" className="section relative pt-16 pb-8 md:pt-16 md:pb-0 bg-white">
-        <Navbar/>
+    <div id="recordForm" className="section relative pt-16 pb-8 md:pt-16 md:pb-0 bg-white">
+    <Navbar/>
         <div className="container mt-2 xl:max-w-6xl mx-auto lg:px-8">
                 <div className="flex items-center justify-center md:flex pt-2 mb-6"> 
                 <h2 className="text-xl font-josefin-regular text-bold">Expediente</h2>
@@ -23,7 +23,7 @@ export default function RecordFunction() {
                             <AddBtn />
                         </div>
                     </div>
-                    <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full max-w-xs" />
+                    <input type="text" placeholder="escribe aqui" className="mt-2 input input-sm input-bordered input-primary w-full max-w-xs" />
                 </div>
             </div>
             {/* END block */}
@@ -35,7 +35,7 @@ export default function RecordFunction() {
                             <AddBtn />
                         </div>
                     </div>
-                    <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full max-w-xs" />
+                    <input type="text" placeholder="Type here" className="mt-2 input input-sm input-bordered input-primary w-full max-w-xs" />
                 </div>
             </div>
             {/* END block */}
@@ -47,7 +47,7 @@ export default function RecordFunction() {
                             <AddBtn />
                         </div>
                     </div>
-                    <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full max-w-xs" />
+                    <input type="text" placeholder="Type here" className="mt-2 input input-sm input-bordered input-primary w-full max-w-xs" />
                 </div>
             </div>
             {/* END block */}
@@ -59,19 +59,19 @@ export default function RecordFunction() {
                             <AddBtn />
                         </div>
                     </div>
-                    <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full max-w-xs" />
+                    <input type="text" placeholder="Type here" className="mt-2 input input-sm input-bordered input-primary w-full max-w-xs" />
                 </div>
             </div>
             {/* END block */}
             <div className="flex-shrink px-1 w-full sm:w-1/2 lg:w-1/3 lg:px-1">
                 <div className="py-3 px-1 lg:h-32 lg:px-2 bg-gray-50 border-b mb-2 mx-0.5 border-gray-100">
                     <div className="flex flex-row relative">
-                        <h3 className="text-xs mb-2 mr-6 lg:text-lg font-josefin-regular text-black">Enfermedades Cronicas</h3>
+                        <h3 className="text-xs mr-6 lg:text-lg font-josefin-regular text-black">Enfermedades Cronicas</h3>
                         <div className="absolute right-0 top-0">
                             <AddBtn />
                         </div>
                     </div>
-                    <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full max-w-xs" />
+                    <input type="text" placeholder="Type here" className="mt-2 input input-sm input-bordered input-primary w-full max-w-xs" />
                 </div>
             </div>
             {/* END block */}
@@ -83,31 +83,31 @@ export default function RecordFunction() {
                             <AddBtn />
                         </div>
                     </div>
-                    <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full max-w-xs" />
+                    <input type="text" placeholder="Type here" className="mt-2 input input-sm input-bordered input-primary w-full max-w-xs" />
                 </div>
             </div>
             {/* END block */}
             <div className="flex-shrink w-full sm:w-1/2 lg:w-1/3 lg:px-1">
                 <div className="py-3 px-1 lg:h-32 lg:px-4 bg-gray-50 border-b mb-2 mx-0.5 border-gray-100">
                     <div className="flex flex-row relative">
-                        <h3 className="text-xs lg:text-lg mb-2 font-josefin-regular text-black">Antecedentes Familiares</h3>
+                        <h3 className="text-xs lg:text-lg font-josefin-regular text-black">Antecedentes Familiares</h3>
                         <div className="absolute right-0 top-0">
                             <AddBtn />
                         </div>
                     </div>
-                    <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full max-w-xs" />
+                    <input type="text" placeholder="Type here" className="mt-2 input input-sm input-bordered input-primary w-full max-w-xs" />
                 </div>
             </div>
             {/* END block */}
             <div className="flex-shrink px-1 w-full sm:w-1/2 lg:w-1/3 lg:px-1">
                 <div className="py-3 px-1 lg:h-32 lg:px-2 bg-gray-50 border-b mb-2 mx-0.5 border-gray-100">
                     <div className="flex flex-row relative">
-                        <h3 className="text-xs mb-2 lg:text-lg font-josefin-regular text-black">Informacion Adicional</h3>
+                        <h3 className="text-xs lg:text-lg font-josefin-regular text-black">Informacion Adicional</h3>
                         <div className="absolute right-0 top-0">
                             <AddBtn />
                         </div>
                     </div>
-                    <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full max-w-xs" />
+                    <input type="text" placeholder="Type here" className="mt-2 input input-sm input-bordered input-primary w-full max-w-xs" />
                 </div>
             </div>
             {/* END block */}

@@ -60,7 +60,7 @@ export default function Reminder() {
                             </div>
                             <div className="form-control">
                                 <label className="label cursor-pointer">
-                                <span className="label-text text-xs">Norificacion<br/> VitaliApp</span> 
+                                <span className="label-text text-xs">Notificacion<br/> VitaliApp</span> 
                                 <input type="checkbox" checked="checked" className="checkbox checkbox-xs checkbox-primary" />
                                 </label>
                             </div>

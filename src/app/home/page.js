@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Navbar from "./components/Navbar"
 import Footer from "./components/landing-components/Footer";
@@ -12,9 +11,13 @@ export default function Home() {
   return (
     <main className="flex min-h-screen lg:w-full flex-col items-center justify-between">
       <Navbar/>
-      <h1 className="flex flex-col items-center justify-center font-josefin-regular text-xl">
-        HELLO WORLD
-      </h1>
+      <div className="flex flex-col md:flex-row mt-16">
+      <div>
+        <ProfileEmpty/>
+        <HomeRemind/>
+      </div>
+      <HomeDates/>
+      </div>
       <Footer/>
     </main>
   );

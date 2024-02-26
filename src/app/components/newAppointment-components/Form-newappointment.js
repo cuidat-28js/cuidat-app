@@ -12,12 +12,12 @@ export default function FormNewAppointment() {
         <div className="grid justify-items-center content-evenly mt-12">
             <form
                 onSubmit={handleSubmit((data) => {console.log(data)})}
-                className="bg-white px-10 py-20 rounded-3xl border-gray-100 mt-8 max-w-sm shadow-2xl">
+                className="bg-white w-1/2 px-10 py-20 rounded-3xl border-gray-100 mt-8 shadow-2xl">
 
-                <h1 className="text-3xl font-semibold  text-center">
+                <h1 className="text-3xl font-semibold text-center">
                     Nueva cita
                 </h1>
-                <div className="mt-8  space-y-8">
+                <div className="mt-8 max-w-96 space-y-8 mx-auto">
                     <div>
                         <label htmlFor="date-appointment" className="text-base font-medium">
                             Fecha
@@ -25,7 +25,7 @@ export default function FormNewAppointment() {
                         <input
                             id="date-appointment"
                             type="date"
-                            className="w-full border-2 rounded-xl p-4 mt-1 bg-transparent border-indigo-500/100 shadow-md"
+                            className="w-full py-2 border-2 rounded-md p-4 mt-1 bg-transparent border-violet-800 shadow-md"
                             {...register("date", { required: '*Éste campo es obligatorio'})}/>
                             <p className="text-[12px] text-red-600">{ errors.date?.message }</p>
                     </div>
@@ -36,7 +36,8 @@ export default function FormNewAppointment() {
                         <input
                             id="specialist-appointment"
                             type="text"
-                            className="w-full border-2 rounded-xl p-4 mt-1 bg-transparent border-indigo-500/100 shadow-md"
+                            placeholder="¿A qué tipo de especialista acudirás?"
+                            className="w-full py-2 border-2 rounded-md p-4 mt-1 bg-transparent border-violet-800 shadow-md"
                             {...register("specialist", { required: 'Éste campo es obligatorio'})}/>
                             <p className="text-[12px] text-red-600">{ errors.specialist?.message }</p>
                     </div>
@@ -47,7 +48,8 @@ export default function FormNewAppointment() {
                         <input
                             id="adress-appointment"
                             type="text"
-                            className="w-full border-2 rounded-xl p-4 mt-1 bg-transparent border-indigo-500/100 shadow-md"
+                            placeholder="Ingresa la dirección o liga de ubicación"
+                            className="w-full py-2 border-2 rounded-md p-4 mt-1 bg-transparent border-violet-800 shadow-md"
                             {...register("email", { required: '*Éste campo es obligatorio'})}/>
                             <p className="text-[12px] text-red-600">{ errors.text?.message }</p>
                     </div>
@@ -58,7 +60,8 @@ export default function FormNewAppointment() {
                         <input
                             id="sintoms-appointment"
                             type="text"
-                            className="w-full border-2 rounded-xl p-4 mt-1 bg-transparent border-indigo-500/100 shadow-md"
+                            placeholder="¿Qué tipo de síntomas padeces ?"
+                            className="w-full py-2 border-2 rounded-md p-4 mt-1 bg-transparent border-violet-800 shadow-md"
                             {...register("text", { required: 'Éste campo es obligatorio'})}/>
                             <p className="text-[12px] text-red-600">{ errors.text?.message }</p>
                     </div>
@@ -66,23 +69,24 @@ export default function FormNewAppointment() {
                         <label htmlFor="comments-appointment" className="text-base font-medium">
                             Comentarios
                         </label>
-                        <input
+                        <textarea
                             id="comments-appointment"
                             type="text"
-                            className="w-full border-2 rounded-xl p-4 mt-1 bg-transparent border-indigo-500/100 shadow-md"
+                            placeholder="Inresa tus comentarios"
+                            className="w-full border-2 rounded-md p-4 mt-1 bg-transparent border-violet-800 shadow-mdpy-2"
                             {...register("comments", { required: '*Éste campo es obligatorio'})}/>
                             <p className="text-[12px] text-red-600">{ errors.comments?.message }</p>
                     </div>
-                    <div className="mt-8 flex flex-row gap-y-4">
+                    <div className="flex items-center space-x-12">
                         <button
                             type="submit"
-                            className="active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all py-3 rounded-xl bg-violet-500 text-white text-lg font-bold">
-                                ¡Registrarme!
+                            className="flex py-3 px-3 w-1/2 border-2 rounded-md border-violet-800 items-center active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all font-semibold text-violet-800">
+                                ➕ Receta
                         </button>
 
                         <button
-                            className="flex roundend-xl py-3 border-2 border-gray-100 items-center justify-center gap-2 active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all">
-                                Iniciar sesión con Google
+                            className="flex py-3 px-3 w-1/2 border-2 rounded-md border-violet-800 items-center active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all font-semibold text-violet-800">
+                                ➕ Recordatorio
                         </button>
                     </div>
                     <div className="mt-8 gap-y-4">

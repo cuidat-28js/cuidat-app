@@ -12,7 +12,7 @@ export default function FormNewAppointment() {
         <div className="grid justify-items-center content-evenly mt-12">
             <form
                 onSubmit={handleSubmit((data) => {console.log(data)})}
-                className="bg-white w-1/2 px-10 py-20 rounded-3xl border-gray-100 mt-8 shadow-2xl">
+                className="bg-white px-10 py-20 rounded-3xl border-gray-100 mt-8 shadow-2xl">
 
                 <h1 className="text-3xl font-semibold text-center">
                     Nueva cita
@@ -72,28 +72,28 @@ export default function FormNewAppointment() {
                         <textarea
                             id="comments-appointment"
                             type="text"
-                            placeholder="Inresa tus comentarios"
+                            placeholder="Ingresa tus comentarios"
                             className="w-full border-2 rounded-md p-4 mt-1 bg-transparent border-violet-800 shadow-mdpy-2"
                             {...register("comments", { required: '*Éste campo es obligatorio'})}/>
                             <p className="text-[12px] text-red-600">{ errors.comments?.message }</p>
                     </div>
-                    <div className="flex items-center space-x-12">
+                    <div className="flex space-x-12">
                         <button
                             type="submit"
-                            className="flex py-3 px-3 w-1/2 border-2 rounded-md border-violet-800 items-center active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all font-semibold text-violet-800">
+                            className="whitespace-nowrap flex p-3 w-1/2 border-2 justify-center rounded-md border-violet-800  active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all font-semibold text-violet-800">
                                 ➕ Receta
                         </button>
 
                         <button
-                            className="flex py-3 px-3 w-1/2 border-2 rounded-md border-violet-800 items-center active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all font-semibold text-violet-800">
+                            className="whitespace-nowrap flex p-3 w-1/2 border-2 justify-center rounded-md border-violet-800 active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all font-semibold text-violet-800">
                                 ➕ Recordatorio
                         </button>
                     </div>
-                    <div className="mt-8 gap-y-4">
+                    <div className="mt-8 gap-y-4 text-center">
                         <button
                             type="submit"
-                            className="active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all py-3 rounded-xl bg-violet-500 text-white text-lg font-bold">
-                                ¡Registrarme!
+                            className="w-9/12 active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all py-3 rounded-xl bg-violet-500 text-white text-lg font-bold">
+                                Guardar
                         </button>
                     </div>
                 </div>

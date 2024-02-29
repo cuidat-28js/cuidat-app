@@ -114,7 +114,7 @@ export default function Expediente() {
             {/* END block */}
             <div className="flex-shrink px-1 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-1">
                 <div className="py-8 px-2 md:px-12 mb-2">
-                    <button className="btn btn-sm lg:btn-md btn-primary text-sm lg:text-lg w-full hover:bg-white hover:border-primary hover:text-primary" type="button">Guardar</button>
+                    <button className="btn btn-sm lg:btn-md btn-primary text-sm lg:text-lg w-full hover:bg-white hover:border-primary hover:text-primary" type="button">Editar</button>
                 </div>
                {/* end block */}
             </div>

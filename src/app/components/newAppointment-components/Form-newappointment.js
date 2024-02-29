@@ -1,26 +1,23 @@
-"use client";
-import React, { Fragment, useState } from "react";
-import { useForm } from "react-hook-form";
-import ModalReminder from "../modalReminder";
+"use client"
+import React, { Fragment, useState } from "react"
+import { useForm } from "react-hook-form"
+import ModalReminder from "../modalReminder"
 
 export default function FormNewAppointment() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
-  } = useForm();
+  } = useForm()
 
-  // console.log(watch())
-
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false)
 
   return (
     <Fragment>
       <div className="grid mx-auto w-96 sm:w-1/2 lg:w-1/2 content-evenly mt-12">
         <form
           onSubmit={handleSubmit((data) => {
-            console.log(data);
+            console.log(data)
           })}
           className="bg-white px-10 py-20 rounded-3xl border-gray-100 mt-8 shadow-xl shadow-violet-500"
         >
@@ -75,11 +72,8 @@ export default function FormNewAppointment() {
                 type="text"
                 placeholder="Ingresa la dirección o liga de ubicación"
                 className="w-full py-2 border-2 rounded-md p-4 mt-1 bg-transparent border-violet-800 shadow-md"
-                {...register("email", {
-                  required: "*Éste campo es obligatorio",
-                })}
+                {...register("email")}
               />
-              <p className="text-[12px] text-red-600">{errors.text?.message}</p>
             </div>
             <div>
               <label
@@ -93,9 +87,8 @@ export default function FormNewAppointment() {
                 type="text"
                 placeholder="¿Qué tipo de síntomas padeces?"
                 className="w-full py-2 border-2 rounded-md p-4 mt-1 bg-transparent border-violet-800 shadow-md"
-                {...register("text", { required: "Éste campo es obligatorio" })}
+                {...register("text")}
               />
-              <p className="text-[12px] text-red-600">{errors.text?.message}</p>
             </div>
             <div>
               <label
@@ -109,13 +102,8 @@ export default function FormNewAppointment() {
                 type="text"
                 placeholder="Ingresa tus comentarios"
                 className="w-full border-2 rounded-md p-4 mt-1 bg-transparent border-violet-800 shadow-mdpy-2"
-                {...register("comments", {
-                  required: "*Éste campo es obligatorio",
-                })}
+                {...register("comments")}
               />
-              <p className="text-[12px] text-red-600">
-                {errors.comments?.message}
-              </p>
             </div>
             <div>
               <label
@@ -133,11 +121,9 @@ export default function FormNewAppointment() {
                                 file:bg-white file:text-violet-800 file:border-2 file:rounded-md
                                 file:border-violet-800 file:active:scale-[.98] file:active:duration-75 file:hover:scale-[1.01]
                                 file:easy-in-out file:transition-all"
-                {...register("file", { required: "Éste campo es obligatorio" })}
+                {...register("file")}
               />
-              <p className="text-[12px] text-red-600">{errors.file?.message}</p>
             </div>
-
             <div className="items-center flex flex-col sm:space-x-12">
               <button
                 className="whitespace-nowrap flex p-3 w-full
@@ -160,9 +146,7 @@ export default function FormNewAppointment() {
           </div>
         </form>
       </div>
-      <ModalReminder isVisible={showModal} onClose={() => setShowModal(false)}>
-
-      </ModalReminder>
+      <ModalReminder isVisible={showModal} onClose={() => setShowModal(false)}/>
     </Fragment>
   );
 }

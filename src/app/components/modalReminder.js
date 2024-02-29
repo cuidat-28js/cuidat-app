@@ -1,7 +1,15 @@
-"use client";
-import React from "react";
+"use client"
+import React from "react"
+import { useForm } from "react-hook-form"
 
 const ModalReminder = ({ isVisible, onClose, children }) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm()
+
+
   if (!isVisible) return null;
 
   const handleClose = (e) => {
@@ -22,7 +30,11 @@ const ModalReminder = ({ isVisible, onClose, children }) => {
           X
         </button>
 
-        <form className="bg-white p-6 rounded-3xl shadow-2xl shadowviolet-800">
+        <form onSubmit={handleSubmit((data) => {
+          console.log(data)
+        })}
+
+        className="bg-white p-6 rounded-3xl shadow-2xl shadowviolet-800">
           <h1 className="text-base font-semibold text-center">
             Añadir Recordatorio
           </h1>
@@ -35,6 +47,7 @@ const ModalReminder = ({ isVisible, onClose, children }) => {
                 id="title-reminder"
                 type="text"
                 className="text-sm text-base w-full border-2 rounded-md px-2 py-1 mt-1 bg-transparent border-violet-800 shadow-md"
+                {...register("title", {required: "*Éste campo es obligatorio"})}
               />
             </div>
             <div>
@@ -43,51 +56,46 @@ const ModalReminder = ({ isVisible, onClose, children }) => {
               </label>
               <input
                 type="datetime-local"
-                id="inputDate"
+                id="date-reminder"
                 className="w-full border-2 rounded-md px-2 py-0.5 mt-1 bg-transparent border-violet-800 shadow-md"
+                {...register("date", {required: "*Éste campo es obligatorio"})}
               />
             </div>
 
             <div>
               <label
-                htmlFor="sintoms-appointment"
+                htmlFor="recurrence-appointment"
                 className="flex flex-col text-sm font-medium mr-2"
               >
                 Repetir
               </label>
               <input
                 type="number"
+                id="recurrence-appointment"
                 name="recurrence"
                 min="1"
                 max="24"
                 className="w-12 py-0.5 px-1.5 mr-1 text-sm border-2 rounded-md mt-1 bg-transparent border-violet-800 shadow-md"
+                {...register("number", {required: "*Éste campo es obligatorio"})}
               />
               hrs
             </div>
 
             <div className="form-control">
-              <label
-                htmlFor="sintoms-appointment"
-                className="flex flex-col text-sm font-medium"
+              <label className="flex flex-col text-sm font-medium"
               >
                 Notificación
               </label>
-              <label className="label cursor-pointer">
-                <span className="label-text text-sm">VitaliApp</span>
-                <input
-                  type="checkbox"
-                  className="checkbox checkbox-xs checkbox-primary"
-                />
-              </label>
-              <label className="label cursor-pointer mt-">
+              <label className="label cursor-pointer mt-" htmlFor="email-reminder">
                 <span className="label-text text-sm">Email</span>
                 <input
                   type="checkbox"
+                  id="email-reminder"
                   className="checkbox checkbox-xs checkbox-primary"
+                  {...register("number")}
                 />
               </label>
             </div>
-
             <div className="gap-y-4 text-center">
               <button
                 type="submit"

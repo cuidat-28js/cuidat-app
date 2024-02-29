@@ -1,23 +1,23 @@
-"use client"
-import React, { Fragment, useState } from "react"
-import { useForm } from "react-hook-form"
-import ModalReminder from "../modalReminder"
+"use client";
+import React, { Fragment, useState } from "react";
+import { useForm } from "react-hook-form";
+import ModalReminder from "../modalReminder";
 
 export default function FormNewAppointment() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm()
+  } = useForm();
 
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <Fragment>
       <div className="grid mx-auto w-96 sm:w-1/2 lg:w-1/2 content-evenly mt-12">
         <form
           onSubmit={handleSubmit((data) => {
-            console.log(data)
+            console.log(data);
           })}
           className="bg-white px-10 py-20 rounded-3xl border-gray-100 mt-8 shadow-xl shadow-violet-500"
         >
@@ -146,7 +146,10 @@ export default function FormNewAppointment() {
           </div>
         </form>
       </div>
-      <ModalReminder isVisible={showModal} onClose={() => setShowModal(false)}/>
+      <ModalReminder
+        isVisible={showModal}
+        onClose={() => setShowModal(false)}
+      />
     </Fragment>
   );
 }

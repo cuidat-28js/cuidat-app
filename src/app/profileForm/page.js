@@ -7,7 +7,7 @@ export default function ProfileForm() {
     return(
         <div className="flex min-h-screen lg:w-full flex-col items-center justify-between">
         <NavBar/>
-            <form className="md:w-1/2 flex flex-col w-70 border-2 rounded pt-6 items-center mt-20 bg-white shadow-2x1">
+            <form className="md:w-1/2 flex flex-col w-60 md:w-90 border-2 rounded pt-6 items-center mt-20 bg-white border-gray-200 shadow-2x1">
                 <div className="mb-4">
                     <h1 className="font-josefin-regular text-xl">
                         Completa tu Perfil

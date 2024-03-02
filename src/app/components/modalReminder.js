@@ -77,7 +77,7 @@ const ModalReminder = ({ isVisible, onClose, children }) => {
                 type="number"
                 id="recurrence-appointment"
                 name="recurrence"
-                min="1"
+                min="0"
                 max="24"
                 className="w-12 py-0.5 px-1.5 mr-1 text-sm border-2 rounded-md mt-1 bg-transparent border-violet-800 shadow-md"
                 {...register("number", {
@@ -99,8 +99,9 @@ const ModalReminder = ({ isVisible, onClose, children }) => {
                 <input
                   type="checkbox"
                   id="email-reminder"
+                  value="notification-email"
                   className="checkbox checkbox-xs checkbox-primary"
-                  {...register("number")}
+                  {...register("email")}
                 />
               </label>
             </div>

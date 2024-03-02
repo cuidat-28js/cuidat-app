@@ -21,7 +21,7 @@ export default function FormNewAppointment() {
           })}
           className="bg-white px-10 py-20 rounded-3xl border-gray-100 mt-8 shadow-xl shadow-violet-500"
         >
-          <h1 className="text-3xl font-semibold text-center">Nueva cita</h1>
+          <h1 className="text-3xl font-semibold text-center">Registro de consulta</h1>
           <div className="mt-8 max-w-96 space-y-8 mx-auto">
             <div>
               <label
@@ -50,7 +50,7 @@ export default function FormNewAppointment() {
               <input
                 id="specialist-appointment"
                 type="text"
-                placeholder="¿A qué tipo de especialista acudirás?"
+                placeholder="¿A qué tipo de especialista acudiste?"
                 className="w-full py-2 border-2 rounded-md p-4 mt-1 bg-transparent border-violet-800 shadow-md"
                 {...register("specialist", {
                   required: "Éste campo es obligatorio",
@@ -72,7 +72,7 @@ export default function FormNewAppointment() {
                 type="text"
                 placeholder="Ingresa la dirección o liga de ubicación"
                 className="w-full py-2 border-2 rounded-md p-4 mt-1 bg-transparent border-violet-800 shadow-md"
-                {...register("email")}
+                {...register("adress")}
               />
             </div>
             <div>

@@ -8,14 +8,10 @@ const onPanelChange = (value, mode) => {
   
 const CalendarCompon = () => {
   const { token } = theme.useToken();
-  const wrapperStyle = {
-    width: 400,
-    border: `1px solid ${token.colorBorderSecondary}`,
-    borderRadius: token.borderRadiusLG,
-  };
+  
   return (
-    <div style={wrapperStyle}>
-      <Calendar fullscreen={false} onPanelChange={onPanelChange} />
+    <div className="w-full w-80 md:w-150 ">
+      <Calendar fullscreen={false} />
     </div>
   );
 };

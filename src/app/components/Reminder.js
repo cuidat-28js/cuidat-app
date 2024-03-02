@@ -2,12 +2,13 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-export default function Reminder ({ isVisible, onClose, children }) {
+export default function Reminder () {
     const {
       register,
       handleSubmit,
       formState: { errors },
     } = useForm();
+
   
     return (
       <div
@@ -22,7 +23,7 @@ export default function Reminder ({ isVisible, onClose, children }) {
             })}
             className="p-1 rounded bg-[#cbd5e1]-200 flex flex-col md:flex-row"
           >
-            <div className="First-half md:w-2/3 space-y-2 mx-auto">
+            <div className="First-half md:w-3/5 space-y-2 mx-auto">
                 <h1 className="text-base font-semibold text-center">
                     Añadir Recordatorio
                 </h1>
@@ -53,11 +54,11 @@ export default function Reminder ({ isVisible, onClose, children }) {
                     />
                 </div>
             </div>
-            <div className="Second-half md:w-1/3  mt-4 md:mt-9 md:ml-3">
+            <div className="Second-half md:w-2/5  mt-4 md:mt-9 md:ml-3">
                 <div className="flex flex-row">
                     <label
                     htmlFor="recurrence-appointment"
-                    className="flex flex-col text-sm font-medium mr-16 md:mr-2"
+                    className="flex flex-col text-sm font-medium mr-16 md:mr-8"
                     >
                     Repetir
                     </label>

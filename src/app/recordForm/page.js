@@ -3,6 +3,8 @@ import React from "react"
 import { useState } from "react";
 import Navbar from  "../components/Navbar"
 import AddBtn from "../components/Add-button"
+import Link from "next/link"
+import { useState } from "react";
 
 export default function RecordForm() {
 
@@ -11,7 +13,7 @@ export default function RecordForm() {
     const handleRadioChange = (e) => {
     setSelectedBloodType(e.target.value);
     };
-
+  
     return (
     <div id="recordForm" className="section relative pt-16 md:pt-16 md:pb-0 bg-white">
     <Navbar/>

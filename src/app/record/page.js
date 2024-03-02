@@ -1,9 +1,10 @@
 import React from "react"
 import Navbar from  "../components/Navbar"
-import Link from "next/link"
 import EmptyRecord from "../components/componentsEmpty/EmptyRecord"
+import Link from "next/link"
 
 export default function Expediente() {
+
     return(
         <div id="recordForm" className="section relative pt-16 md:pt-16 md:pb-0 bg-white">
     <Navbar/>

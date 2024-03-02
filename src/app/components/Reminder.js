@@ -1,75 +1,110 @@
+"use client";
 import React from "react";
+import { useForm } from "react-hook-form";
 
-export default function Reminder() {
+export default function Reminder () {
+    const {
+      register,
+      handleSubmit,
+      formState: { errors },
+    } = useForm();
+
+  
     return (
-        <React.Fragment>
-            <div className="justify-center flex flex-col w-160 m-2">
-                <div className="ml-6 ">
-                    <h2 className="text-bold">Añadir Recordatorio</h2>
+      <div
+        className="flex items-center"
+        id="wrapper"
+      >
+        <div className="w-auto flex">
+  
+          <form
+            onSubmit={handleSubmit((data) => {
+              console.log(data);
+            })}
+            className="p-1 rounded bg-[#cbd5e1]-200 flex flex-col md:flex-row"
+          >
+            <div className="First-half md:w-3/5 space-y-2 mx-auto">
+                <h1 className="text-base font-semibold text-center">
+                    Añadir Recordatorio
+                </h1>
+                <div>
+                    <label htmlFor="title-reminder" className="text-sm font-medium">
+                    Título
+                    </label>
+                    <input
+                    id="title-reminder"
+                    type="text"
+                    className="text-sm text-base w-full border-2 rounded-md px-2 py-1 mt-1 bg-transparent border-violet-800 shadow-md"
+                    {...register("title", {
+                        required: "*Éste campo es obligatorio",
+                    })}
+                    />
                 </div>
-                <div className="flex flex-col md:flex-row pl-2">
-                <div className="w-56 my-4">
-                    <div>
-                        <div className="mb-2">
-                            <label for="large-input" className="block mb-2 text-sm font-medium text-primary">Titulo</label>
-                            <input type="text" id="inputTitle" className="px-0 text-gray-900 border border-gray-300 rounded-lg bg-gray-50"/>
-                        </div>
-                        <div className="mb-2">
-                            <label for="large-input" className="block mb-2 text-sm font-medium text-primary">Fecha</label>
-                            <input type="date" id="inputDate" className="block px-6 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
-                        </div>
-                    </div>
-                    <div className="w-52 mt-4">
-                        <button className="button rounded btn-active btn-block btn-primary text-sm">Añadir</button>
-                    </div>
-                </div>
-                <div className="ml-4 flex flex-row">
-                    <div className="m-1 w-20">
-                        <p className="mt-3 text-sm">Repetir</p>
-                        <div className="flex flex-col">
-                            <label className=" mt-2 text-xs">
-                                <input type="radio" name="bloodtype" value="A+"/> 1 hr
-                            </label>
-                            <label className=" mt-2 text-xs">
-                                <input type="radio" name="bloodtype" value="A-"/> 2 hrs
-                            </label>
-                            <label className=" mt-2 text-xs">
-                                <input type="radio" name="bloodtype" value="B+"/> 4 hrs
-                            </label>
-                            <label className=" mt-2 text-xs">
-                                <input type="radio" name="bloodtype" value="B-"/> 6 hrs
-                            </label>
-                            <label className=" mt-2 text-xs">
-                                <input type="radio" name="bloodtype" value="AB+"/> 8 hrs
-                            </label>
-                            <label className=" mt-2 text-xs">
-                                <input type="radio" name="bloodtype" value="AB-"/> 12 hrs
-                            </label>
-                        </div>
-                    </div>
-                    <div className="mb-1 mt-2 w-28">
-                        <p className="mt-2 text-sm">
-                            Notificación
-                        </p>
-                        <div>
-                            <div className="form-control">
-                            <label className="label cursor-pointer">
-                                <span className="label-text text-xs">E-mail</span> 
-                                <input type="checkbox" checked="checked" className="checkbox checkbox-xs checkbox-primary" />
-                            </label>
-                            </div>
-                            <div className="form-control">
-                                <label className="label cursor-pointer">
-                                <span className="label-text text-xs">Notificacion<br/> VitaliApp</span> 
-                                <input type="checkbox" checked="checked" className="checkbox checkbox-xs checkbox-primary" />
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
+                <div>
+                    <label htmlFor="date-reminder" className="text-sm font-medium">
+                    Fecha
+                    </label>
+                    <input
+                    type="datetime-local"
+                    id="date-reminder"
+                    className="w-full border-2 rounded-md px-2 py-0.5 mt-1 bg-transparent border-violet-800 shadow-md"
+                    {...register("date", {
+                        required: "*Éste campo es obligatorio",
+                    })}
+                    />
                 </div>
             </div>
-        </React.Fragment>
-    )
-}
+            <div className="Second-half md:w-2/5  mt-4 md:mt-9 md:ml-3">
+                <div className="flex flex-row">
+                    <label
+                    htmlFor="recurrence-appointment"
+                    className="flex flex-col text-sm font-medium mr-16 md:mr-8"
+                    >
+                    Repetir
+                    </label>
+                    <input
+                    type="number"
+                    id="recurrence-appointment"
+                    name="recurrence"
+                    min="1"
+                    max="24"
+                    className="w-12 px-1.5 text-sm border-2 rounded-md mt-1 bg-transparent border-violet-800 shadow-md"
+                    {...register("number", {
+                        required: "*Éste campo es obligatorio",
+                    })}
+                    />
+                    hrs
+                </div>
+    
+                <div className="form-control mt-3">
+                    <label className="flex flex-col text-sm font-medium">
+                    Notificación
+                    </label>
+                    <label
+                    className="label cursor-pointer mr-3"
+                    htmlFor="email-reminder"
+                    >
+                    <span className="label-text text-sm">Email</span>
+                    <input
+                        type="checkbox"
+                        id="email-reminder"
+                        className="checkbox checkbox-xs checkbox-primary"
+                        {...register("number")}
+                    />
+                    </label>
+                </div>
+                <div className="gap-y-4 text-center">
+                    <button
+                    type="submit"
+                    className="w-full active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all py-1 rounded-xl bg-violet-500 text-white text-sm font-medium"
+                    >
+                    Guardar
+                    </button>
+                </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    );
+  };
+

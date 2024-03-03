@@ -1,8 +1,11 @@
-import Navbar from "../components/Navbar"
+import Image from "next/image";
+import Navbar from "../components/Navbar";
 import Footer from "../components/landing-components/Footer";
 import HomeRemind from "../components/componentsEmpty/HomeRemind";
 import HomeDates from "../components/componentsEmpty/HomeDates";
+import Reminder from "../components/Reminder"
 import ProfileEmpty from "../components/componentsEmpty/ProfileEmpty";
+import CalendarCompon from "../components/Calendar";
 
 export default function Home() {
   return (

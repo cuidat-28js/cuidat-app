@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image"
 import AddBtn from "../Add-button";
+import Link from "next/link";
 
 export default function HomeDates() {
     return (
@@ -24,9 +25,12 @@ export default function HomeDates() {
                     Aun no tienes registros de citas
                     </p>
                     <button type="button"
-                    className="justify-center rounded m-3 bg-primary px-6 pb-2 pt-2 text-xs font-medium uppercase leading-normal text-white hover:bg-white hover:border-primary hover:text-primary"
+                    className="justify-center rounded m-3 bg-primary px-6 pb-2 pt-2 text-sm font-medium text-white hover:bg-white hover:border hover:border-primary hover:text-primary"
                     >
-                    Crear cita</button>
+                        <Link href="/newAppointment">
+                        CREAR CITA
+                        </Link>
+                    </button>
                 </div>
             </div>
         </React.Fragment>

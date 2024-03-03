@@ -6,8 +6,7 @@ import { useState } from 'react';
 export default function NavBar() {
   const [navbar, setNavbar] = useState(false);
   return (
-    <div>
-      <nav className="shadow-lg shadow-[#E7E3FF] w-full bg-white fixed top-2 left-0 right-0 z-10">
+      <nav className="shadow-lg shadow-[#E7E3FF] w-full bg-white fixed top-0 left-0 right-0 z-10">
         <div className="justify-between py-0 my-0 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-1 md:py-3 md:block">
@@ -47,12 +46,12 @@ export default function NavBar() {
             >
               <ul className="h-screen md:h-auto items-center justify-center md:flex ">
                 <li className="text-l font-josefin-regular text-black pb-1 py-1  md:px-6 text-center border-b-2 md:border-b-0  hover:border-primary  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-                  <Link href="#about" onClick={() => setNavbar(!navbar)}>
+                  <Link href="/record" onClick={() => setNavbar(!navbar)}>
                     Expediente
                   </Link>
                 </li>
                 <li className="pb-1 text-l font-josefin-regular text-black py-1 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-                  <Link href="#about" onClick={() => setNavbar(!navbar)}>
+                  <Link href="/calendar" onClick={() => setNavbar(!navbar)}>
                     Calendario
                   </Link>
                 </li>
@@ -76,7 +75,6 @@ export default function NavBar() {
           </div>
         </div>
       </nav>
-    </div>
   );
 }
 

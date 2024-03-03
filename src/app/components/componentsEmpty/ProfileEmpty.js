@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProfileEmpty() {
     return (
@@ -16,9 +17,12 @@ export default function ProfileEmpty() {
                 </div>
                 <div>
                     <button type="button"
-                    className="justify-center rounded m-3 bg-primary px-6 pb-2 pt-2 text-xs font-medium uppercase leading-normal text-white hover:bg-white hover:border-primary hover:text-primary"
+                    className="justify-center rounded m-3 bg-primary px-6 pb-2 pt-2 text-xs font-medium text-white hover:bg-white hover:border hover:border-primary hover:text-primary"
                     >
-                    Editar perfil</button>
+                        <Link href="/profileForm">
+                        Editar Perfil
+                        </Link>
+                    </button>
                 </div>
             </div>
         </React.Fragment>

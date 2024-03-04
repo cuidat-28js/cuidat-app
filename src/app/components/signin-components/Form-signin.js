@@ -116,7 +116,7 @@ export default function FormSignin() {
             Regístrate con Google
           </button>
         </div>
-        <p className="font-lato-regular text-lg text-[#000] mt-4 text-center">
+        <p className="font-lato-regular text-lg text-[#000] mt-8 text-center">
           ¿Ya tienes una cuenta?
           <span className="text-[#4D11AF] ml-2 font-extrabold underline underline-offset-1">
             <Link href="/login">Inicia Sesion</Link>

@@ -6,12 +6,12 @@ export default function HomeRemind() {
   return (
     <React.Fragment>
       <div>
-        <div className="flex flex-col items-center mx-4 mt-7">
+        <div className="flex flex-col items-center mx-4">
           <h3 className="mt-4 font-josefin-regular text-center font-bold hidden md:block">
             Recordatorios
           </h3>
 
-          <div className="hidden md:block mt-4">
+          <div className="hidden md:block mt-2 mb-8">
             <div className="text-sm mb-2 flex">
               <button className="mr-2">
                 <Image
@@ -70,7 +70,7 @@ export default function HomeRemind() {
                 </div> */}
         </div>
 
-        <div className="collapse bg-[#EEECF2] shadow md:hidden">
+        <div className="collapse bg-[#EEECF2] shadow  mt-4 md:hidden">
           <input type="checkbox" />
           <div className="collapse-title font-josefin-regular  font-bold">
             <h3>Recordatorios</h3>

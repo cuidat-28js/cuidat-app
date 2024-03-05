@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <React.Fragment>
       <Navbar />
-      
       <div className="mt-20 md:grid md:grid-cols-12">
       <aside className="md:col-span-3">
         <ProfileEmpty />
@@ -25,10 +24,6 @@ export default function Home() {
         <div>Blog de articulos aqui</div>
       </aside>
       </div>
-      
-      
-     
-
       <Footer />
     </React.Fragment>
   );

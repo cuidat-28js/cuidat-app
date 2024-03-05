@@ -50,6 +50,8 @@ export default function ProfileEmpty() {
         </div>
       </div>
 
+      {/* <div className="hidden md:flex divider"></div> */}
+
       {/* <div className="mt-6 flex justify-center">
       <FaFileMedicalAlt className="mr-2 "/> 
       <span>Mi expediente</span>

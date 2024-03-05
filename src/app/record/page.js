@@ -1,7 +1,7 @@
 import React from "react"
 import Navbar from  "../components/Navbar"
 import Footer from "../components/landing-components/Footer"
-import EmptyRecord from "../components/componentsEmpty/EmptyRecord"
+import EmptyRecord from "../components/home-components/EmptyRecord"
 import Link from "next/link"
 
 export default function Expediente() {

@@ -1,10 +1,10 @@
 import Form from "@/app/components/componentsEmpty.js"
-import HomeDates from "../components/componentsEmpty/HomeDates";
-import HomeRemind from "../components/componentsEmpty/HomeRemind";
+import HomeDates from "../components/home-components/HomeDates";
+import HomeRemind from "../components/home-components/HomeRemind";
 import NavBar from "../components/Navbar";
-import MsgRecord from "../components/componentsEmpty/MsgRecord";
-import ProfileEmpty from "../components/componentsEmpty/ProfileEmpty";
-import RemindersEmpty from "../components/componentsEmpty/ReminderEmpty";
+import MsgRecord from "../components/home-components/MsgRecord";
+import ProfileEmpty from "../components/home-components/Profile";
+import RemindersEmpty from "../components/home-components/ReminderEmpty";
 import Footer from "../components/landing-components/Footer";
 
 export default function emptyHome() {

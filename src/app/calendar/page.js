@@ -1,6 +1,6 @@
 import CalendarCompon from "../components/Calendar"
 import Reminder from "../components/Reminder"
-import RemindersEmpty from "../components/componentsEmpty/ReminderEmpty"
+import RemindersEmpty from "../components/home-components/ReminderEmpty"
 import NavBar from "../components/Navbar"
 import ReminderPost from "../components/ReminderPost"
 

@@ -9,7 +9,7 @@ export default function NavBar() {
       <nav className="shadow-lg shadow-[#E7E3FF] w-full bg-white fixed top-0 left-0 right-0 z-10">
         <div className="justify-between py-0 my-0 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
-            <div className="flex items-center justify-between py-1 md:py-3 md:block">
+            <div className="flex items-center justify-between ml-4 py-1 md:py-3 md:block">
               {/* LOGO */}
               <Link href="/" className='mt-0'>
                 <Image src="/logo-lg.svg" 
@@ -24,14 +24,15 @@ export default function NavBar() {
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
-                    <Image src="/icons/close-menu.svg" width={30} height={30} alt="logo" />
+                    <Image src="/icons/close-menu.svg" width={30} height={30} alt="logo"
+                    className='mr-4' />
                   ) : (
                     <Image
                       src="/icons/burger-btn.svg"
-                      width={20}
+                      width={30}
                       height={30}
                       alt="logo"
-                      className="focus:border-none active:border-none mr-2"
+                      className="focus:border-none active:border-none mr-4"
                     />
                   )}
                 </button>
@@ -40,34 +41,41 @@ export default function NavBar() {
           </div>
           <div>
             <div
-              className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                navbar ? 'p-12 md:p-0 block' : 'hidden'
+              className={` justify-self-center pb-3 mt-2 md:block md:pb-0 md:mt-0 ${
+                navbar ? 'p-2 md:p-0 block ml-14 space-y-5' : 'hidden'
               }`}
             >
-              <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-                <li className="text-l font-josefin-regular text-black pb-1 py-1  md:px-6 text-center border-b-2 md:border-b-0  hover:border-primary  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-                  <Link href="/record" onClick={() => setNavbar(!navbar)}>
+              <ul className="h-screen md:h-auto items-center md:justify-center md:flex ">
+                <li className=" font-josefin-regular text-lg mt-1 py-2 px-3 md:py-1 md:px-6 text-end border-b-2 md:border-b-0 border-primary">
+                  <Link href="/record" onClick={() => setNavbar(!navbar)}
+                        className='flex justify-between'>
+                    <Image src="icons/mesage-icon.svg" width={30} height={30} alt='icono mensaje'
+                    className='md:hidden' />
                     Expediente
                   </Link>
                 </li>
-                <li className="pb-1 text-l font-josefin-regular text-black py-1 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-                  <Link href="/calendar" onClick={() => setNavbar(!navbar)}>
+                <li className="font-josefin-regular text-lg mt-1 py-2 px-3 md:py-1 md:px-6 text-end border-b-2 md:border-b-0 border-primary">
+                  <Link href="/calendar" onClick={() => setNavbar(!navbar)}
+                        className='flex justify-between'>
+                  <Image src="icons/calendar-icon.svg" width={30} height={30} alt='icono calendario'
+                    className='md:hidden'/>
                     Calendario
                   </Link>
                 </li>
-                <li className="text-l font-josefin-regular text-black py-1 px-2 pb-1 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-                  <Link href="#blog" onClick={() => setNavbar(!navbar)}>
+                <li className="font-josefin-regular text-lg mt-1  py-2 md:py-1 px-3 text-end border-b-2 md:border-b-0 border-primary">
+                  <Link href="#blog" onClick={() => setNavbar(!navbar)}
+                        className='flex justify-between'>
+                    <Image src="icons/location-icon.svg" width={30} height={30} alt='icono locacion'
+                      className='md:hidden'/>
                     Especialistas
                   </Link>
                 </li>
-                <li className="pb-1 text-l font-josefin-regular text-black py-1 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-                  <Link href="#contact" onClick={() => setNavbar(!navbar)}>
+                <li className="font-josefin-regular text-lg mt-1 py-4 md:ml-5 md:py-0.5 px-3 border-b-2 md:border-b-0 border-primary md:text-white md:bg-primary md:rounded-full">
+                  <Link href="#contact" onClick={() => setNavbar(!navbar)}
+                        className='flex justify-between'>
+                  <Image src="icons/arrow-down.svg" width={25} height={30} alt='icono flecha'
+                      className='md:hidden'/>
                     ¡Hola Jhon!
-                  </Link>
-                </li>
-                <li className="text-l font-josefin-regular text-white py-1 px-2 text-center bg-violetVitalli rounded-full border-b-2 md:border-b-0 hover:border-purple hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-                  <Link href="#projects" onClick={() => setNavbar(!navbar)}>
-                    JD
                   </Link>
                 </li>
               </ul>

@@ -7,16 +7,6 @@ export default function HomeDates() {
   return (
     <React.Fragment>
       <div>
-        <div className="m-2 flex">
-          <h3 className="font-josefin-regular text-lg mt-2 mr-2">Citas</h3>
-          <div className="pt-2 mx-auto text-gray-600">
-                    <input className="border-2 border-gray-300 bg-white h-8 px-5 pr-2 rounded-full text-sm focus:outline-none"
-                    type="search" placeholder="Buscar"/>
-                </div>
-          <div className="ml-2 mt-2">
-            <AddBtn />
-          </div>
-        </div>
         <div className="rounded flex flex-col items-center shadow p-1 bg-[#F9F9F9]">
           <Image
             src="/ilustrations/doctora-record.svg"

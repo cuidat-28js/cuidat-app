@@ -8,7 +8,7 @@ export default function ProfileEmpty() {
 
   return (
     <React.Fragment>
-      <div className="mt-6 flex flex-col m-2 items-center hidden md:flex">
+      <div className="mt-2 flex flex-col m-2 items-center hidden md:flex">
 
         {/* avatar con info */}
         <div className="avatar">
@@ -24,7 +24,7 @@ export default function ProfileEmpty() {
 
 
 
-        <div className="mt-6 text-center">
+        <div className="mt-4 text-center">
                 <p className="text-xl font-extrabold">Jhon Alejandro</p>
                 <div>
                   <p>Genero: Masculino</p>

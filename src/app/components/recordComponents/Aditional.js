@@ -1,5 +1,5 @@
 import React from "react"
-import EmptyRecord from "../componentsEmpty/EmptyRecord"
+import EmptyRecord from "../home-components/EmptyRecord"
 
 export default function AditionalInfo() {
     return(

@@ -1,12 +1,10 @@
-import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/landing-components/Footer";
 import HomeRemind from "../components/home-components/HomeRemind";
 import HomeDates from "../components/home-components/HomeDates";
-import Reminder from "../components/Reminder";
 import ProfileEmpty from "../components/home-components/Profile";
-import CalendarCompon from "../components/Calendar";
 import React from "react";
+
 
 export default function Home() {
   return (
@@ -21,7 +19,7 @@ export default function Home() {
         <HomeDates />
       </main>
       <aside className="md:grid md:col-span-3">
-        <div>Blog de articulos aqui</div>
+        <div className="flex justify-center">Blog de articulos aqui</div>
       </aside>
       </div>
       <Footer />

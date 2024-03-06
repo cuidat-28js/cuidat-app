@@ -6,7 +6,7 @@ import { useState } from 'react';
 export default function NavBar() {
   const [navbar, setNavbar] = useState(false);
   return (
-      <nav className="shadow-lg shadow-[#E7E3FF] w-full bg-white fixed top-0 left-0 right-0 z-10">
+      <nav className="shadow-lg shadow-violet-200 w-full bg-white fixed top-0 left-0 right-0 z-10">
         <div className="justify-between py-0 my-0 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between ml-4 py-1 md:py-3 md:block">

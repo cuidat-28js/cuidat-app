@@ -12,7 +12,7 @@ export default function ProfileEmpty() {
 
         {/* avatar con info */}
         <div className="avatar">
-          <div className="w-24 rounded-full ring ring-[#6851FF] ring-offset-base-100 ring-offset-2">
+          <div className="w-20 rounded-full ring ring-[#6851FF] ring-offset-base-100 ring-offset-2">
             <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
           </div>
         </div>
@@ -25,12 +25,12 @@ export default function ProfileEmpty() {
 
 
         <div className="mt-4 text-center">
-                <p className="text-xl font-extrabold">Jhon Alejandro</p>
+                <p className="text-lg font-extrabold">Jhon Alejandro</p>
                 <div>
-                  <p>Genero: Masculino</p>
-                  <p>Grupo sanguineo: O+</p>
-                  <p>Cel: 978 098 091</p>
-                  <p>Edad: 19</p>
+                  <p className="text-md">Sexo: Masculino</p>
+                  <p className="text-md">Grupo sanguineo: O+</p>
+                  <p className="text-md">Cel: 978 098 091</p>
+                  <p className="text-md">Edad: 19</p>
                 </div>
         </div>        
         {/* <div className="border rounded m-2 bg-[#F9F9F9] py-4 px-2">
@@ -40,7 +40,7 @@ export default function ProfileEmpty() {
         </div> */}
 
 
-        <div className="mt-4">
+        <div className="mt-2">
           <button
             type="button"
             className="justify-center rounded m-3 bg-[#6851FF] px-6 pb-2 pt-2 text-xs font-medium text-white hover:bg-white hover:border hover:border-[#6851FF] hover:text-[#6851FF]"

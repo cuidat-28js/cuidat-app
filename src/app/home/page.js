@@ -4,8 +4,6 @@ import HomeRemind from "../components/home-components/HomeRemind";
 import HomeDates from "../components/home-components/HomeDates";
 import ProfileEmpty from "../components/home-components/Profile";
 import React from "react";
-import AppointmentPost from "../components/AppointmentPost";
-import AddBtn from "../components/Add-button";
 
 
 export default function Home() {
@@ -21,7 +19,7 @@ export default function Home() {
         <HomeDates />
       </main>
       <aside className="md:grid md:col-span-3">
-        <div>Blog de articulos aqui</div>
+        <div className="flex justify-center">Blog de articulos aqui</div>
       </aside>
       </div>
       <Footer />

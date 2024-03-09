@@ -2,6 +2,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
+import { useRouter } from 'next/navigation'
 
 export default function FormLogin() {
   const {
@@ -9,6 +10,8 @@ export default function FormLogin() {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const router = useRouter();
 
   const userLogin = async (data) => {
     try {
@@ -22,8 +25,11 @@ export default function FormLogin() {
 
       if (response.ok) {
         const jsonResponse = await response.json();
-        console.log("hola nariz de bola");
-        console.log(jsonResponse);
+        console.log(jsonResponse.token);
+        setTimeout(() => {
+          localStorage.setItem("token", jsonResponse.token);
+          router.push("/home");
+        }, 1500)
       } else {
         console.log("error al iniciar sesion", response.body);
       }

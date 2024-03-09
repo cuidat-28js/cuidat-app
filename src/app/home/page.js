@@ -1,17 +1,23 @@
+
 "use client";
 import Image from "next/image";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/landing-components/Footer";
 import HomeRemind from "../components/home-components/HomeRemind";
 import HomeDates from "../components/home-components/HomeDates";
-import Reminder from "../components/Reminder";
 import ProfileEmpty from "../components/home-components/Profile";
+
 import CalendarCompon from "../components/Calendar";
 import React, { useEffect } from "react";
 import { redirect } from "next/navigation";
 import SessionAuthProvider from "../context/SessionAuthProvider";
 
 import { signIn, signOut, useSession } from "next-auth/react";
+
+import React from "react";
+
+
 
 export default function Home() {
   // const { data: session, status } = useSession();
@@ -43,6 +49,7 @@ export default function Home() {
 
   return (
     <React.Fragment>
+
       {/* <SessionAuthProvider session={session}> */}
         <Navbar />
         <div className="mt-20 md:grid md:grid-cols-12">
@@ -59,6 +66,7 @@ export default function Home() {
         </div>
         <Footer />
       {/* </SessionAuthProvider> */}
+
     </React.Fragment>
   );
 }

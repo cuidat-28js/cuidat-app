@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function ProfileForm() {
 
-    const { handleSubmit } = useForm();
+    const { handleSubmit, register, formState: { errors }} = useForm();
     const {selectedSex, setSelectedSex} = useState(null);
 
     const handleSexClick = (sexOption) => {

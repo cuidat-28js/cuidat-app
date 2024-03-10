@@ -25,13 +25,19 @@ export default function ProfileForm() {
                         Completa tu Perfil
                     </h1>
                 </div>
-                <div className="flex flex-col m-1 md:w-2/3">
-                    <div className="flex justify-center">
-                        <Image className="m-2" src="/icons/perfil-vacio.svg" 
-                        width={80}
-                        height={80}
-                        alt="profile placeholder"/>
+                <div className="flex flex-col m-1 w-4/5 md:w-2/3">
+                    
+                    <div className="flex flex-col items-center mb-4">
+                        <div className="flex justify-center">
+                            <Image className="m-2" src="/icons/perfil-vacio.svg" 
+                            width={80}
+                            height={80}
+                            alt="profile placeholder"/>
+                        </div>
+                        <input type="file" id="picture" accept="image/*" {...register('picture')} 
+                        className="file-input file-input-bordered file-input-xs file-input-primary text-xs w-2/3 " />
                     </div>
+
                     <div className="mb-2">
                         <label for="input" className="block mb-2 text-sm font-medium text-primary">Nombre</label>
                         <input type="text" id="firstName" {...register("firstName")}

@@ -10,14 +10,46 @@ export default function FormSignin() {
     formState: { errors },
   } = useForm();
 
-  const userRegister = async (data) => {
+  const getUsers = async () => {
     try {
-      const response = await fetch("http://localhost:3001/user/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
+      const response = await fetch("http://localhost:3001/user/");
+      if(response.ok){
+        const users = await response.json();
+        console.log(users.data.users, "array users");
+        return users;
+      }
+    } catch (error) {
+      console.log( error,"error al realizar la peticion");
+    }
+  };
+
+  // const emailExist = async  () => {
+  //   const emailUsers = await getUsers();
+
+  //   // const users =  getUsers();
+  //   // console.log(users)
+   
+  //  const hola =  emailUsers.forEach((user) => console.log(user.email, "holii"));
+  //  return hola
+  //   // return usersEmail
+  //   // if( email === users) {
+  //   //   console.log("hi")
+  //   // }
+  // };
+
+  // emailExist();
+
+  
+  
+  const userRegister = async (data) => {
+  try {
+    const response 
+    = await fetch("http://localhost:3001/user/register", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
       });
 
       if (response.ok) {
@@ -31,7 +63,7 @@ export default function FormSignin() {
       console.log(error, "error al crear la solicitud");
     }
   };
-
+  
   return (
     <form
       onSubmit={handleSubmit(userRegister)}
@@ -52,9 +84,12 @@ export default function FormSignin() {
           <input
             id="signin-email"
             type="email"
+            // onBlur={}
             className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
             placeholder="Ingresa tu correo electrónico"
-            {...register("email", { required: "*Éste campo es obligatorio" })}
+            {...register("email", { 
+              required: "*Éste campo es obligatorio",
+            })}
           />
           <p className="text-[12px] text-red-600">{errors.email?.message}</p>
         </div>
@@ -72,9 +107,10 @@ export default function FormSignin() {
             placeholder="Crea tu contraseña"
             {...register("password", {
               required: "Éste campo es obligatorio",
-              minLength: {
-                value: 8,
-                message: "*Tu contraseña debe tener al menos 8 caracteres",
+              pattern: {
+                value:
+                /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/,
+                message: "Includes lowercase, uppercase, special character%, minimum 8 characters"
               },
             })}
           />

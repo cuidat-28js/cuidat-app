@@ -1,4 +1,3 @@
-
 "use client";
 import Image from "next/image";
 
@@ -15,14 +14,9 @@ import SessionAuthProvider from "../context/SessionAuthProvider";
 
 import { signIn, signOut, useSession } from "next-auth/react";
 
-import React from "react";
-
-
-
 export default function Home() {
   // const { data: session, status } = useSession();
   // console.log(session, status)
-
 
   // if (session) {
   //   return (
@@ -39,7 +33,7 @@ export default function Home() {
   // } else {
   //   console.log(session)
   // }
- 
+
   // const token = localStorage.getItem("token");
   // useEffect(() => {
   //   if (!token) {
@@ -49,24 +43,22 @@ export default function Home() {
 
   return (
     <React.Fragment>
-
       {/* <SessionAuthProvider session={session}> */}
-        <Navbar />
-        <div className="mt-20 md:grid md:grid-cols-12">
-          <aside className="md:col-span-3">
-            <ProfileEmpty />
-            <HomeRemind />
-          </aside>
-          <main className="md:grid md:col-span-6">
-            <HomeDates />
-          </main>
-          <aside className="md:grid md:col-span-3">
-            <div>Blog de articulos aqui</div>
-          </aside>
-        </div>
-        <Footer />
+      <Navbar />
+      <div className="mt-20 md:grid md:grid-cols-12">
+        <aside className="md:col-span-3">
+          <ProfileEmpty />
+          <HomeRemind />
+        </aside>
+        <main className="md:grid md:col-span-6">
+          <HomeDates />
+        </main>
+        <aside className="md:grid md:col-span-3">
+          <div>Blog de articulos aqui</div>
+        </aside>
+      </div>
+      <Footer />
       {/* </SessionAuthProvider> */}
-
     </React.Fragment>
   );
 }

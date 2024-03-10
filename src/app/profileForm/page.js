@@ -38,7 +38,7 @@ export default function ProfileForm() {
                         className="block p-1 input-xs md:input-sm md:w-full text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
                     </div>
                     <div className="mb-2 ">
-                        <label for="input" className="block mb-2 text-sm font-medium text-primary">Apeido</label>
+                        <label for="input" className="block mb-2 text-sm font-medium text-primary">Apellido</label>
                         <input type="text" id="lastName" {...register("lastName")}
                         className="block p-1 input-xs md:input-sm md:w-full text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
                     </div>
@@ -49,11 +49,21 @@ export default function ProfileForm() {
                             className="block p-1 input-xs md:input-sm md:w-full text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/> 
                         </div>
                         <div className="dropdown dropdown-bottom md:ml-2 md:w-1/2">
-                            <label for="dropdown" className="flex md:justify-center text-sm font-medium text-primary my-1">Sexo</label>
-                            <div tabIndex={0} role="button" className="btn btn-sm md:w-full text-gray-500">Elige tu sexo</div>
+                            <label for="dropdown" className="flex md:justify-center text-sm font-medium text-primary my-1">Sexo Biologico</label>
+                            <div tabIndex={0} role="button" className="btn btn-sm md:w-full text-gray-500">Selecciona tu sexo</div>
                                  <ul tabIndex={0} className="dropdown-content z-[1] menu shadow bg-base-100 rounded-box">
-                                    <li><a onClick={() => handleSexClick("Man")} >Hombre</a></li>
-                                    <li><a onClick={() => handleSexClick("Woman")}>Mujer</a></li>
+                                    <li>
+                                        <label className="label cursor-pointer">
+                                            <span className="label-text">Hombre</span> 
+                                            <input type="radio" value="hombre" {...register('gender')} className="radio radio-primary" checked />
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label className="label cursor-pointer">
+                                            <span className="label-text">Mujer</span> 
+                                            <input type="radio" value="mujer" {...register('gender')} className="radio radio-primary" checked />
+                                        </label>
+                                    </li>
                                 </ul>
                             </div>
                     </div>

@@ -42,8 +42,10 @@ export default function Home() {
   // });
 
   return (
-    <React.Fragment>
+
+    <div className="h-screen ">
       {/* <SessionAuthProvider session={session}> */}
+
       <Navbar />
       <div className="mt-20 md:grid md:grid-cols-12">
         <aside className="md:col-span-3">
@@ -58,7 +60,9 @@ export default function Home() {
         </aside>
       </div>
       <Footer />
-      {/* </SessionAuthProvider> */}
-    </React.Fragment>
+     {/* </SessionAuthProvider> */}   
+    </div>
+      
+
   );
 }

@@ -35,7 +35,7 @@ export default function ProfileForm() {
                             alt="profile placeholder"/>
                         </div>
                         <input type="file" id="picture" accept="image/*" {...register('picture')} 
-                        className="file-input file-input-bordered file-input-xs file-input-primary text-xs w-2/3 " />
+                        className="file-input file-input-bordered file-input-xs file-input-primary text-xs w-2/5 " />
                     </div>
 
                     <div className="mb-2">

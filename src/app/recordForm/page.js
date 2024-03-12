@@ -9,34 +9,38 @@ import Footer from "../components/landing-components/Footer";
 export default function RecordForm() {
 
     const [selectedBloodType, setSelectedBloodType] = useState('');
-    const [inputAlergies, setInputAlergies] = useState('');
     const [inputChronic, setInputChronic] = useState('');
     const [inputMedicine, setInputMedicine] = useState('');
     const [inputHistory, setInputHistory] = useState('');
 
-    const handleSubmit = (e) => {
+    const [inputAlergies, setInputAlergies] = useState('');
+    const handleClick = () => {
+        console.log(inputAlergies); // Here you can use the text as you wish
+    };
+
+    const handleSubmit = () => {
         e.preventDefault();
         console.log(selectedBloodType, inputAlergies, inputChronic, inputMedicine, inputHistory);
     };
 
-    const handleRadioChange = (e) => {
+    const handleRadioChange = () => {
     setSelectedBloodType(e.target.value);
     
     };
 
-    const handleAlergiesChange = (e) => {
+    const handleChange = (event) => {
         setInputAlergies(e.target.value);
     };
 
-    const handleChronicChange = (e) => {
+    const handleChronicChange = () => {
         setInputChronic(e.target.value);
     };
     
-    const handleMedicineChange = (e) => {
+    const handleMedicineChange = () => {
         setInputMedicine(e.target.value);
     };
     
-    const handleHistoryChange = (e) => {
+    const handleHistoryChange = () => {
         setInputHistory(e.target.value);
     };
   
@@ -137,16 +141,16 @@ export default function RecordForm() {
                     <div className="justify-between flex flex-row mb-1 lg:my-1">
                         <h3 className="text-md lg:text-lg font-josefin-regular text-black">Alergias</h3>
                         <div className="mr-1">
-                            <AddBtn />
+                            <AddBtn onClick={handleClick} />
                         </div>
                     </div>
-                    <input type="text" placeholder="Polvo" value={inputAlergies} onChange={handleAlergiesChange}
+                    <input type="text" placeholder="Polvo" value={inputAlergies} onChange={handleChange}
                     className="mt-2 input input-xs lg:input-sm input-bordered input-primary w-full max-w-xs" />
                     <div className="space-y-1 space-x-2 mt-3">
                         <div className="flex flex-row ml-auto">
                             <div className="badge badge-ghost space-x-1.5 py-4" >
-                                <button className="btn btn-xs btn-circle text-primary">X</button>
-                                <p>Mariscos</p>
+                
+                                <p>{inputAlergies}</p>
                             </div>
 
                         </div>

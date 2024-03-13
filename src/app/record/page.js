@@ -42,7 +42,7 @@ export default function Expediente() {
                     </div>
                     {/* END block */}
                     <div className="flex-shrink px-1 w-full sm:w-1/2 lg:w-1/3 lg:px-1 ">
-                        <div className="py-3 px-1 h-32 mb-2 mx-0.5 lg:h-44 lg:px-2 bg-whiterounded-lg shadow-md shadow-violet-400">
+                        <div className="py-3 px-1 h-32 mb-2 mx-0.5 lg:h-44 lg:px-2 bg-whiterounded-lg rounded shadow-md shadow-violet-400">
                             <div className="flex flex-row justify-center mb-2 lg:my-2">
                                 <h3 className="text-md lg:text-lg font-josefin-regular text-black">Enfermedades Cronicas</h3>
                             </div>

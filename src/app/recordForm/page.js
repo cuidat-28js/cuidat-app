@@ -1,6 +1,7 @@
 "use client"
 import React from "react"
 import { useForm } from "react-hook-form";
+import { MdDelete } from "react-icons/md";
 import Navbar from  "../components/Navbar"
 import AddBtn from "../components/Add-button"
 import Footer from "../components/landing-components/Footer";
@@ -123,9 +124,10 @@ export default function RecordForm() {
                     className="mt-2 input input-xs lg:input-sm input-bordered input-primary w-full max-w-xs" />
                     <div className="space-y-1 space-x-2 mt-3">
                         <div className="flex flex-row ml-auto">
-                            <div className="badge badge-ghost space-x-1.5 py-4" >
+                            <div className="badge badge-ghost space-x-2 py-4 mr-0" >
                 
                                 <p>Polvo</p>
+                                <button className="p-1 rounded-full hover:bg-gray-300" ><MdDelete /></button> 
                             </div>
                         </div>
                     </div>

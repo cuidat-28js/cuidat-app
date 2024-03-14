@@ -17,7 +17,6 @@ function GoogleMapView() {
                 center={cordinate}
                 zoom={12}>
                 
-
                 </GoogleMap>
 
             </LoadScript>

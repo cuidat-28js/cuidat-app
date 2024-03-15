@@ -42,6 +42,26 @@ export default function FormNewAppointment() {
             </div>
             <div>
               <label
+                htmlFor="specialistName-appointment"
+                className="text-base font-medium"
+              >
+                Nombre del especialista
+              </label>
+              <input
+                id="specialistName-appointment"
+                type="text"
+                placeholder="¿Cuál es el nombre del Espacialista?"
+                className="w-full py-2 border-2 rounded-md p-4 mt-1 bg-transparent border-violet-800 shadow-md"
+                {...register("specialistName", {
+                  required: "Éste campo es obligatorio",
+                })}
+              />
+              <p className="text-[12px] text-red-600">
+                {errors.specialist?.message}
+              </p>
+            </div>
+            <div>
+              <label
                 htmlFor="specialist-appointment"
                 className="text-base font-medium"
               >

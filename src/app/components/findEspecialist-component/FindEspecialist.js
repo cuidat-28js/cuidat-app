@@ -37,19 +37,6 @@ export default function FindEspecialist() {
             </svg>
           </button>
         </div>
-        <h2 className="font-bold px-2">Seleccionar radio (kms)</h2>
-        <input
-          type="range"
-          className="w-full h-2 bg-purple-200 rounded-lg appearance-none cursor-pointer"
-          min="1"
-          max="10"
-          step="1"
-          onChange={(e) => setRadius(e.target.value)}
-          defaultValue={radius}
-        />
-        <label className="text-gray-500 text-[15px]">
-          En {radius} kilómetros
-        </label>
         <div className="p-3">
           <ResultsList />
           <SelectRating />

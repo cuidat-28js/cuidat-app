@@ -77,6 +77,21 @@ export default function FormNewAppointment() {
             </div>
             <div>
               <label
+                htmlFor="phone-appointment"
+                className="text-base font-medium"
+              >
+                Teléfono
+              </label>
+              <input
+                id="phone-appointment"
+                type="text"
+                placeholder="Ingresa el número de teléfono."
+                className="w-full py-2 border-2 rounded-md p-4 mt-1 bg-transparent border-violet-800 shadow-md"
+                {...register("phone")}
+              />
+            </div>
+            <div>
+              <label
                 htmlFor="sintoms-appointment"
                 className="text-base font-medium"
               >

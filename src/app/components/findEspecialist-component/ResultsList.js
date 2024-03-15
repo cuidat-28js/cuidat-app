@@ -6,7 +6,7 @@ function ResultsList() {
   const [selectedResult, setSelectedResult] = useState()
   return (
     <div>
-      <h2 className="font-bold">Elementos encontrados</h2>
+      <h2 className="font-bold">Especialistas encontrados</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {resultsList.map((item, index) => (
           <div className={`flex flex-col justify-center items-center p-2 m-2 rounded-lg cursor-pointer border-[1px] shadow-sm shadow-violet-500 hover:border-violet-800

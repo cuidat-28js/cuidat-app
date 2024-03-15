@@ -6,7 +6,7 @@
 
 export default function ContactForm () {
 
-    const { register, handleSubmit, formState: { errors } } = useForm()
+    const { register, handleSubmit, formState: { errors }, reset } = useForm()
     const [showItem, setShowItem] = useState([])
 
     const onSubmit = (data) => {
@@ -17,7 +17,14 @@ export default function ContactForm () {
         showItem.push(contactName + ' - ' + contactNumber)
         // 3. Actualizar el estado (showItem) mediante su función (setShowItem)
         setShowItem([...showItem])
+        reset()
     }
+
+    const handleDelete = (index) => {
+        const updatedItems = [...showItem];
+        updatedItems.splice(index, 1);
+        setShowItem(updatedItems);
+    };
  
     return (
         <form onSubmit={handleSubmit(onSubmit)}
@@ -60,9 +67,14 @@ export default function ContactForm () {
                 </button>
             </div>
             
-            {showItem.map((item, key) => {
+            {showItem.map((item, index) => {
             return (
-                <p key={key}>{item}</p>
+                <div key={index}
+                className='flex justify-between m-1 pl-3 pr-1 rounded-full bg-gray-200'>
+                <p >{item}</p>
+                <button type='button' onClick={() => handleDelete(index)}
+                className='rounded-full text-primary hover:bg-gray-300 px-2'>x</button>
+                </div>
             )
             })}
         </form>

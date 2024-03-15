@@ -1,127 +1,76 @@
 "use client";
-import Link from "next/link";
 import React from "react";
 import { useForm } from "react-hook-form";
+import Link from "next/link";
+import  {useLogin}  from "../hooks/useLogin";
 
-export default function FormSignin() {
+export default function FormLogin() {
+  const logInMutation = useLogin();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const getUsers = async () => {
+  const onSubmit = async (data) => {
     try {
-      const response = await fetch("http://localhost:3001/user/");
-      if(response.ok){
-        const users = await response.json();
-        console.log(users.data.users, "array users");
-        return users;
-      }
+       logInMutation(data);
+       console.log(data)
     } catch (error) {
-      console.log( error,"error al realizar la peticion");
+      console.error('Error signing up:', error);
     }
   };
 
-  // const emailExist = async  () => {
-  //   const emailUsers = await getUsers();
-
-  //   // const users =  getUsers();
-  //   // console.log(users)
-   
-  //  const hola =  emailUsers.forEach((user) => console.log(user.email, "holii"));
-  //  return hola
-  //   // return usersEmail
-  //   // if( email === users) {
-  //   //   console.log("hi")
-  //   // }
-  // };
-
-  // emailExist();
-
-  
-  
-  const userRegister = async (data) => {
-  try {
-    const response 
-    = await fetch("http://localhost:3001/user/register", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        const jsonResponse = await response.json();
-        console.log("user created", jsonResponse);
-      } else {
-        console.log(response.body);
-        console.log("error al registrar un usuario");
-      }
-    } catch (error) {
-      console.log(error, "error al crear la solicitud");
-    }
-  };
-  
   return (
     <form
-      onSubmit={handleSubmit(userRegister)}
-      className="bg-red px-10 py-20 rounded-3xl border-gray-100"
+      onSubmit={handleSubmit(onSubmit)}
+      className="bg-white px-10 py-20 rounded-3xl border-gray-100"
     >
-      <h1 className="text-5xl font-semibold font-josefin-regular">
-        ¡Bienvenido a <span className="text-violetVitalli">VitalliApp</span>!
-      </h1>
-      <p className="font-lato-regular text-lg text-gray-500 mt-4">
-        Tu salud, tu control, tu camino; regístrate.
-      </p>
-
+      <h1 className="text-5xl font-semibold text-center">Iniciar sesión</h1>
       <div className="mt-8">
         <div>
-          <label htmlFor="signin-email" className="text-lg font-lato-regular">
+          <label htmlFor="login-email" className="text-lg font-medium">
             Correo electrónico
           </label>
           <input
-            id="signin-email"
+            id="login-email"
             type="email"
-            // onBlur={}
             className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
             placeholder="Ingresa tu correo electrónico"
-            {...register("email", { 
-              required: "*Éste campo es obligatorio",
-            })}
+            {...register("email", { required: "*Éste campo es obligatorio" })}
           />
           <p className="text-[12px] text-red-600">{errors.email?.message}</p>
         </div>
         <div>
-          <label
-            htmlFor="signin-password"
-            className="text-lg font-lato-regular"
-          >
+          <label htmlFor="signin-password" className="text-lg font-medium">
             Contraseña
           </label>
           <input
             id="signin-password"
             type="password"
             className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
-            placeholder="Crea tu contraseña"
+            placeholder="Ingresa tu contraseña"
             {...register("password", {
               required: "Éste campo es obligatorio",
-              pattern: {
-                value:
-                /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/,
-                message: "Includes lowercase, uppercase, special character%, minimum 8 characters"
-              },
             })}
           />
-          <p className="text-[12px] text-red-600">{errors.password?.message}</p>
+          {/* cambiar el tipo de error al no coincidir la contraseña correcta <p className="text-[12px] text-red-600">{ errors.password?.message }</p> */}
+        </div>
+        <div className="mt-8 flex justify-between items-center">
+          <div>
+            <input type="checkbox" id="remember" />
+            <label className="ml-2 font-medium text-base" htmlFor="remember">
+              Recordar contraseña
+            </label>
+          </div>
+          <button className="font-medium text-bse text-violetVitalli">
+            Olvidé mi contraseña
+          </button>
         </div>
         <div className="mt-8 flex flex-col gap-y-4">
-          <button
-            type="submit"
-            className="active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all py-3 rounded-xl bg-violetVitalli text-white text-xl font-lato-regular"
-          >
-            ¡Regístrarme!
+          <button className="active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all py-3 rounded-xl bg-violetVitalli text-white text-lg font-bold">
+            Iniciar sesión
           </button>
           <button className="flex roundend-xl py-3 border-2 border-gray-100 items-center justify-center gap-2 active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all">
             <svg
@@ -149,13 +98,13 @@ export default function FormSignin() {
                 d="M43.611,20.083L43.595,20L42,20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
               ></path>
             </svg>
-            Regístrate con Google
+            Iniciar sesión con Google
           </button>
         </div>
         <p className="font-lato-regular text-lg text-[#000] mt-8 text-center">
-          ¿Ya tienes una cuenta?
+          ¿Necesitas crear una cuenta?
           <span className="text-[#4D11AF] ml-2 font-extrabold underline underline-offset-1">
-            <Link href="/login">Inicia Sesion</Link>
+            <Link href="/auth/signin">Registrate</Link>
           </span>
         </p>
       </div>

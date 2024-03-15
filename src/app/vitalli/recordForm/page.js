@@ -2,9 +2,9 @@
 import React from "react"
 import { useState } from "react";
 import Image from "next/image";
-import Navbar from  "../components/Navbar"
-import AddBtn from "../components/Add-button"
-import Footer from "../components/landing-components/Footer";
+import Navbar from  "../../components/Navbar"
+import AddBtn from "../../components/Add-button"
+import Footer from "../../components/landing-components/Footer";
 
 export default function RecordForm() {
 

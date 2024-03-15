@@ -2,7 +2,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-export default function Reminder () {
+export default function ReminderForm () {
     const {
       register,
       handleSubmit,

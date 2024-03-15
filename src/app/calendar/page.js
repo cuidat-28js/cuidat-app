@@ -1,8 +1,8 @@
 import CalendarCompon from "../components/Calendar"
-import Reminder from "../components/Reminder"
 import RemindersEmpty from "../components/home-components/ReminderEmpty"
 import NavBar from "../components/Navbar"
 import ReminderPost from "../components/ReminderPost"
+import ReminderForm from "../components/Reminder"
 
 export default function CalendarPage() {
     return (
@@ -30,7 +30,7 @@ export default function CalendarPage() {
                             <CalendarCompon/>
                         </div>
                         <div>
-                            <Reminder/>
+                            <ReminderForm/>
                         </div>
                     </div>
                 </div>

@@ -12,13 +12,12 @@ export default function FamilyForm () {
     const onSubmit = (data) => {
         // 1. Sacar el valor (medicine) del objeto data
         const family = data.family
+        const disease = data.disease
         // 2. Agregar el valor (medicine) al array del estado (showItem)
-        showItem.push(family)
+        showItem.push(family + ' - ' + disease)
         // 3. Actualizar el estado (showItem) mediante su función (setShowItem)
         setShowItem([...showItem])
-        }
-
-    
+    }    
     
     return (
         <form onSubmit={handleSubmit(onSubmit)}
@@ -38,7 +37,7 @@ export default function FamilyForm () {
                     />
                     <input type="text" placeholder="Enfermedad" 
                     className="mr-2 input input-xs lg:input-sm input-bordered input-primary w-full max-w-xs"
-                    {...register('family', {
+                    {...register('disease', {
                     required: {value: true, message: 'Este campo es requerido'},
                     maxLength: {value: 18, message: 'Ingresa 18 carácteres cómo máximo.'},
                     minLength: {value: 3, message: "Ingresa 3 carácteres cómo mínimo."}

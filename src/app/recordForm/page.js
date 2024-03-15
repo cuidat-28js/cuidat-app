@@ -29,17 +29,17 @@ export default function RecordForm() {
                     <h2 className="text-xl font-josefin-regular text-bold">Expediente</h2>   
                 </div>
             
-            <form className="flex flex-col items-center">
+            <div className="flex flex-col items-center">
                 <div className="flex flex-wrap items-center flex-row m-1 lg:mx-16 text-center">
                     {/* START block */}
                     
                     <div className="flex-shrink px-1 w-full sm:w-1/2 lg:w-1/3 lg:px-1 bg-white">
-                    <AllergyForm/>
+                        <AllergyForm/>
                     </div> 
                     {/* END block */}
 
                     <div className="flex-shrink sm:w-1/2 lg:w-1/3 md lg:px-1 ">
-                    <BloodForm/>
+                        <MedicineForm/>
                     </div>
                     {/* END block */}
 
@@ -49,7 +49,7 @@ export default function RecordForm() {
                     {/* END block */}
 
                     <div className="flex-shrink w-full sm:w-1/2 lg:w-1/3 lg:px-1 bg-white">
-                        <MedicineForm/> 
+                        <BloodForm/> 
                     </div>
                     {/* END block */}
 
@@ -78,7 +78,7 @@ export default function RecordForm() {
                         <Link href="/record">Finalizar Editar</Link>
                     </button>
                 </div>
-            </form>
+            </div>
             {/* end row */}
         </div>
         <Footer/>

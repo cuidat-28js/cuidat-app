@@ -11,46 +11,50 @@ export default function ContactForm () {
 
     const onSubmit = (data) => {
         // 1. Sacar el valor (medicine) del objeto data
-        const contact = data.contact
+        const contactName = data.contactName
+        const contactNumber = data.contactNumber
         // 2. Agregar el valor (medicine) al array del estado (showItem)
-        showItem.push(contact)
+        showItem.push(contactName + ' - ' + contactNumber)
         // 3. Actualizar el estado (showItem) mediante su función (setShowItem)
         setShowItem([...showItem])
-        }
-
-    
-    
+    }
+ 
     return (
         <form onSubmit={handleSubmit(onSubmit)}
             className="py-3 px-1 h-32 lg:h-56 lg:px-2 bg-white shadow-md shadow-violet-400 rounded mb-2 mx-0.5">
             <div className="flex flex-row justify-between mb-2 lg:my-2">
-                 <h3 className="ml-2 text-md lg:text-lg font-josefin-regular text-black">Antecedentes Familiares</h3>
+                 <h3 className="ml-2 text-md lg:text-lg font-josefin-regular text-black">Contacto de Emergencia</h3>
             </div>
             <div className='flex flex-row'>
                 <div className='block mr-2 space-y-2'>
                 <input type="text" placeholder="Nombre de contacto" 
                 className="mr-2 input input-xs lg:input-sm input-bordered input-primary w-full max-w-xs"
-                {...register('contact', {
+                {...register('contactName', {
                 required: {value: true, message: 'Este campo es requerido'},
                 maxLength: {value: 18, message: 'Ingresa 18 carácteres cómo máximo.'},
                 minLength: {value: 3, message: "Ingresa 3 carácteres cómo mínimo."}
                 })}
                 />
+                    {errors.contactName?.message && 
+                    <span className='col-start-1 col-end-4 text-pink-600 text-xs'>
+                        {errors.contactName.message}
+                    </span>
+                    }
                 <input type="text" placeholder="Numero de telefono" 
                 className="mr-2 input input-xs lg:input-sm input-bordered input-primary w-full max-w-xs"
-                {...register('contact', {
+                {...register('contactNumber', {
                 required: {value: true, message: 'Este campo es requerido'},
                 maxLength: {value: 18, message: 'Ingresa 18 carácteres cómo máximo.'},
                 minLength: {value: 3, message: "Ingresa 3 carácteres cómo mínimo."}
                 })}
                 />
                 </div>
-                {errors.contact?.message && 
-                <span className='col-start-1 col-end-4 text-pink-600 text-xs'>
-                    {errors.contact.message}
-                </span>
-                }
-                <button type='submit' disabled={errors.contact?.type}
+                    {errors.contactNumber?.message && 
+                    <span className='col-start-1 col-end-4 text-pink-600 text-xs'>
+                        {errors.contactNumber.message}
+                    </span>
+                    }
+                <button type='submit' disabled={errors.contactNum?.type}
                     >
                         <AddBtn />
                 </button>

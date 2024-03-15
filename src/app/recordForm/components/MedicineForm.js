@@ -22,7 +22,7 @@ export default function MedicineForm () {
     
     return (
         <form onSubmit={handleSubmit(onSubmit)}
-            className="py-3 px-1 h-32 lg:h-56 lg:px-2 bg-white shadow-md shadow-violet-400 rounded mb-2 mx-0.5">
+            className="py-3 px-1 h-32 lg:h-44 lg:px-2 bg-white shadow-md shadow-violet-400 rounded mb-2 mx-0.5">
             <div className="flex flex-row justify-between mb-2 lg:my-2">
                  <h3 className="ml-2 text-md lg:text-lg font-josefin-regular text-black">Medicamento Controlado</h3>
             </div>

@@ -1,11 +1,7 @@
 "use client"
 import React from "react"
-
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import Navbar from  "../components/Navbar"
-import AddBtn from "../components/Add-button"
-import Footer from "../components/landing-components/Footer";
 import AllergyForm from "./components/AllergyForm";
 import Link from "next/link"
 import ChronicForm from "./components/ChronicForm";
@@ -13,7 +9,8 @@ import MedicineForm from "./components/MedicineForm";
 import FamilyForm from "./components/Familyform";
 import ContactForm from "./components/ContactForm";
 import BloodForm from "./components/BloodGroupForm";
-
+import Navbar from  "../../components/Navbar"
+import Footer from "../../components/landing-components/Footer";
 
 export default function RecordForm() {
 

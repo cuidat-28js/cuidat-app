@@ -1,8 +1,16 @@
+<<<<<<< HEAD:src/app/calendar/page.js
 import CalendarCompon from "../components/Calendar"
 import RemindersEmpty from "../components/home-components/ReminderEmpty"
 import NavBar from "../components/Navbar"
 import ReminderPost from "../components/ReminderPost"
 import ReminderForm from "../components/Reminder"
+=======
+import CalendarCompon from "../../components/Calendar"
+import Reminder from "../../components/Reminder"
+import RemindersEmpty from "../../components/home-components/ReminderEmpty"
+import NavBar from "../../components/Navbar"
+import ReminderPost from "../../components/ReminderPost"
+>>>>>>> e3e178b (management global state):src/app/vitalli/calendar/page.js
 
 export default function CalendarPage() {
     return (

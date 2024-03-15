@@ -47,7 +47,7 @@ export default function NavBar() {
             >
               <ul className="h-screen md:h-auto items-center md:justify-center md:flex ">
                 <li className=" font-josefin-regular text-lg mt-1 py-2 px-3 md:py-1 md:px-6 text-end border-b-2 md:border-b-0 border-primary">
-                  <Link href="/record" onClick={() => setNavbar(!navbar)}
+                  <Link href="/vitalli/record" onClick={() => setNavbar(!navbar)}
                         className='flex justify-between'>
                     <Image src="icons/mesage-icon.svg" width={30} height={30} alt='icono mensaje'
                     className='md:hidden' />
@@ -55,7 +55,7 @@ export default function NavBar() {
                   </Link>
                 </li>
                 <li className="font-josefin-regular text-lg mt-1 py-2 px-3 md:py-1 md:px-6 text-end border-b-2 md:border-b-0 border-primary">
-                  <Link href="/calendar" onClick={() => setNavbar(!navbar)}
+                  <Link href="/vitalli/calendar" onClick={() => setNavbar(!navbar)}
                         className='flex justify-between'>
                   <Image src="icons/calendar-icon.svg" width={30} height={30} alt='icono calendario'
                     className='md:hidden'/>

@@ -2,6 +2,7 @@
 import React from "react"
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+<<<<<<< HEAD:src/app/recordForm/page.js
 import Navbar from  "../components/Navbar"
 import AddBtn from "../components/Add-button"
 import Footer from "../components/landing-components/Footer";
@@ -12,6 +13,12 @@ import MedicineForm from "./components/MedicineForm";
 import FamilyForm from "./components/Familyform";
 import ContactForm from "./components/ContactForm";
 import BloodForm from "./components/BloodGroupForm";
+=======
+import Image from "next/image";
+import Navbar from  "../../components/Navbar"
+import AddBtn from "../../components/Add-button"
+import Footer from "../../components/landing-components/Footer";
+>>>>>>> e3e178b (management global state):src/app/vitalli/recordForm/page.js
 
 export default function RecordForm() {
 

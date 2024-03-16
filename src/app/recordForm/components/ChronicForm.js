@@ -4,7 +4,7 @@
  import AddBtn from '../../components/Add-button'
 
 
-export default function FamilyForm () {
+export default function ChronicForm () {
 
     const { register, handleSubmit, formState: { errors }, reset } = useForm()
     const [showItem, setShowItem] = useState([])

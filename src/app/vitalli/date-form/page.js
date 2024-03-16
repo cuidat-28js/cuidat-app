@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from "../components/Navbar";
-import Footer from "../components/landing-components/Footer";
+import NavBar from "../../components/Navbar";
+import Footer from "../../components/landing-components/Footer";
 
 export default function DateForm() {
     return(

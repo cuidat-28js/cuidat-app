@@ -1,6 +1,6 @@
-import NavBar from "../components/Navbar";
-import Footer from "../components/landing-components/Footer";
-import FormNewAppointment from "../components/newAppointment-components/Form-newappointment";
+import NavBar from "../../components/Navbar";
+import Footer from "../../components/landing-components/Footer";
+import FormNewAppointment from "../../components/newAppointment-components/Form-newappointment";
 
 export default function newAppointment() {
   

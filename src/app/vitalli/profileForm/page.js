@@ -1,8 +1,8 @@
 "use client"
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import NavBar from "../components/Navbar";
-import Footer from "../components/landing-components/Footer";
+import NavBar from "../../components/Navbar";
+import Footer from "../../components/landing-components/Footer";
 import Image from "next/image";
 
 export default function ProfileForm() {

@@ -1,8 +1,8 @@
-import CalendarCompon from "../components/Calendar"
-import Reminder from "../components/Reminder"
-import RemindersEmpty from "../components/home-components/ReminderEmpty"
-import NavBar from "../components/Navbar"
-import ReminderPost from "../components/ReminderPost"
+import CalendarCompon from "../../components/Calendar"
+import Reminder from "../../components/Reminder"
+import RemindersEmpty from "../../components/home-components/ReminderEmpty"
+import NavBar from "../../components/Navbar"
+import ReminderPost from "../../components/ReminderPost"
 
 export default function CalendarPage() {
     return (

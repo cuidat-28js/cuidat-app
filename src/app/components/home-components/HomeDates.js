@@ -41,7 +41,7 @@ export default function HomeDates() {
             <div className="collapse-title flex items-center">
               <div className="mr-2">
                 <Image
-                  src="./icons/lista.svg"
+                  src="../icons/lista.svg"
                   width={30}
                   height={30}
                   alt="calendar-icon"
@@ -56,7 +56,7 @@ export default function HomeDates() {
                     alt="receta-img"
                     width={200}
                     height={150}
-                    src="./ilustrations/big-landing.svg"
+                    src="../ilustrations/big-landing.svg"
                   />
                 </div>
               <div className="md:ml-8">
@@ -95,7 +95,7 @@ export default function HomeDates() {
             <div className="collapse-title flex items-center">
               <div className="mr-2">
                 <Image
-                  src="./icons/lista.svg"
+                  src="../icons/lista.svg"
                   width={30}
                   height={30}
                   alt="calendar-icon"
@@ -110,7 +110,7 @@ export default function HomeDates() {
                     alt="receta-img"
                     width={200}
                     height={150}
-                    src="./ilustrations/big-landing.svg"
+                    src="../ilustrations/big-landing.svg"
                   />
                 </div>
               <div className="md:ml-8">

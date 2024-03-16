@@ -5,6 +5,7 @@ import Footer from "../../components/landing-components/Footer";
 import HomeRemind from "../../components/home-components/HomeRemind";
 import HomeDates from "../../components/home-components/HomeDates";
 import ProfileEmpty from "../../components/home-components/Profile";
+import NewsAsside from "@/app/components/home-components/News";
 
 import React, { useEffect } from "react";
 
@@ -29,7 +30,7 @@ export default function Home() {
           <HomeDates />
         </main>
         <aside className="md:grid md:col-span-3">
-          <div>Blog de articulos aqui</div>
+        <NewsAsside />
         </aside>
       </div>
       <Footer />

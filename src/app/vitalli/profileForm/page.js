@@ -10,11 +10,6 @@ export default function ProfileForm() {
     const { handleSubmit, register, formState: { errors }} = useForm();
     const {selectedSex, setSelectedSex} = useState(null);
 
-    const handleSexClick = (sexOption) => {
-        setSelectedSex(sexOption);
-        console.log("selcted sex: ", sexOption);
-    }
-
     return(
         <div className="flex min-h-screen lg:w-full flex-col items-center justify-between">
         <NavBar/>

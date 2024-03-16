@@ -11,7 +11,7 @@ export default function ProfileEmpty() {
     logout();
   };
 
-  const getUser = async () => {}
+  const getUser = async () => {};
 
   return (
     <React.Fragment>
@@ -54,9 +54,11 @@ export default function ProfileEmpty() {
         </div>
       </div>
 
-      <button onClick={handleClick} className="btn btn-active btn-primary">
-        cerrar sesion
-      </button>
+      <div className="flex justify-center">
+        <button onClick={handleClick} className="btn btn-active btn-primary">
+          cerrar sesion
+        </button>
+      </div>
 
       {/* <div className="hidden md:flex divider"></div> */}
 
@@ -75,9 +77,7 @@ export default function ProfileEmpty() {
               </div>
             </div>
           </div>
-          <div className="stat-title font-extrabold text-[#000]">
-           jhonnn
-          </div>
+          <div className="stat-title font-extrabold text-[#000]">jhonnn</div>
           <div className="stat-desc ">Edad: 19</div>
           <div className="stat-desc">Genero: Masculino</div>
           <div className="stat-desc">Grupo sanguineo: O+</div>

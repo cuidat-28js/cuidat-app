@@ -26,7 +26,7 @@ export default function Expediente() {
                                 <h3 className="ml-2 text-md lg:text-lg font-josefin-regular text-black">Grupo Sanguineo</h3>
                             </div>
                             <div className="flex flex-row justify-center">
-                                <Image src="./record/blood.svg" alt="blood-drop" width={30} height={40}/>
+                                <Image src="../record/blood.svg" alt="blood-drop" width={30} height={40}/>
                                 <EmptyRecord/> 
                                
                             </div>
@@ -39,7 +39,7 @@ export default function Expediente() {
                                 <h3 className="text-md lg:text-lg font-josefin-regular text-black">Alergias</h3>
                             </div>
                             <div className="flex flex-row justify-center">
-                                <Image src="./record/sick.svg" alt="sick emoji" width={40} height={50}/>   
+                                <Image src="../record/sick.svg" alt="sick emoji" width={40} height={50}/>   
                                 <EmptyRecord/>
                                 
                             </div>
@@ -52,7 +52,7 @@ export default function Expediente() {
                                 <h3 className="text-md lg:text-lg font-josefin-regular text-black">Enfermedades Cronicas</h3>
                             </div>
                             <div className="flex flex-row justify-center">
-                                <Image src="./record/heart.svg" alt="heart icon" width={30} height={30}/>
+                                <Image src="../record/heart.svg" alt="heart icon" width={30} height={30}/>
                                 <EmptyRecord/>
                                 
                             </div>
@@ -65,7 +65,7 @@ export default function Expediente() {
                                 <h3 className="ml-2 text-md lg:text-lg font-josefin-regular text-black">Medicamento Controlado</h3>
                             </div>
                             <div className="flex flex-row justify-center">
-                                <Image src="./record/medicine.svg" alt="medicine" width={40} height={50}/>   
+                                <Image src="../record/medicine.svg" alt="medicine" width={40} height={50}/>   
                                 <EmptyRecord/>
                                 
                             </div>
@@ -78,7 +78,7 @@ export default function Expediente() {
                                 <h3 className="text-md lg:text-lg font-josefin-regular text-black">Antecedentes Familiares</h3>
                             </div>
                             <div className="flex flex-row justify-center">
-                                <Image src="./record/family.svg" alt="family" width={40} height={50}/>
+                                <Image src="../record/family.svg" alt="family" width={40} height={50}/>
                                 <EmptyRecord/>
                                
                             </div>
@@ -91,7 +91,7 @@ export default function Expediente() {
                                 <h3 className="text-md lg:text-lg font-josefin-regular text-black">Contacto de Emergencia</h3>
                             </div>
                             <div className="flex flex-row justify-center">
-                                <Image src="./record/contact.svg" alt="contact" width={30} height={50}/>
+                                <Image src="../record/contact.svg" alt="contact" width={30} height={50}/>
                                 <EmptyRecord/>
                                 
                             </div>
@@ -103,7 +103,7 @@ export default function Expediente() {
                 
                     <div className="flex w-66 bg-white items-center mt-2 mb-6 md:mt-6">
                         <button className="btn btn-wide btn-primary text-md md:text-lg hover:bg-white hover:border-primary hover:text-primary" type="button">
-                            <Link href="/recordForm">Editar</Link>
+                            <Link href="/vitalli/recordForm">Editar</Link>
                         </button>
                     </div>
             

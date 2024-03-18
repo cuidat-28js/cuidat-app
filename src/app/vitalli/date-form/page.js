@@ -1,11 +1,8 @@
 import React from "react";
-import NavBar from "../../components/Navbar";
-import Footer from "../../components/landing-components/Footer";
 
 export default function DateForm() {
     return(
         <div className="flex min-h-screen lg:w-full flex-col items-center justify-between">
-        <NavBar/>
             <form className="md:w-1/3 flex flex-col w-80 border-2 rounded pt-6 items-center mt-20 bg-white">
                 <div className="mb-4">
                     <h1 className="font-josefin-regular text-xl">
@@ -14,23 +11,23 @@ export default function DateForm() {
                 </div>
                 <div>
                     <div className="mb-2">
-                        <label for="large-input" className="block mb-2 text-sm font-medium text-primary">Titulo</label>
+                        <label htmlFor="large-input" className="block mb-2 text-sm font-medium text-primary">Titulo</label>
                         <input type="text" id="title" className="block p-1 md:px-8 md:w-1/1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
                     </div>
                     <div className="mb-2">
-                        <label for="large-input" className="block mb-2 text-sm font-medium text-primary">Fecha</label>
+                        <label htmlFor="large-input" className="block mb-2 text-sm font-medium text-primary">Fecha</label>
                         <input type="date" id="date" className="block p-1 md:px-8 md:w-1/1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
                     </div>
                     <div className="mb-2">
-                        <label for="large-input" className="block mb-2 text-sm font-medium text-primary">Medico</label>
+                        <label htmlFor="large-input" className="block mb-2 text-sm font-medium text-primary">Medico</label>
                         <input type="text" id="doctor" className="block p-1 md:px-8 md:w-1/1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
                     </div>
                     <div className="mb-2">
-                        <label for="large-input" className="block mb-2 text-sm font-medium text-primary">Direccion</label>
+                        <label htmlFor="large-input" className="block mb-2 text-sm font-medium text-primary">Direccion</label>
                         <input type="text" id="adress" className="block p-1 md:px-8 md:w-1/1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
                     </div>
                     <div className="mb-2">
-                        <label for="large-input" className="block mb-2 text-sm font-medium text-primary">Comentarios</label>
+                        <label htmlFor="large-input" className="block mb-2 text-sm font-medium text-primary">Comentarios</label>
                         <textarea type="text" id="comments" className="block p-1 md:px-8 md:w-1/1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base"/>
                     </div>
                 </div>    
@@ -55,7 +52,6 @@ export default function DateForm() {
                     </button>
                 </div>
             </form>
-        <Footer/>
         </div>
     )
 }

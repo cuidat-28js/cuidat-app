@@ -1,27 +1,15 @@
-"use client"
-import { QueryClientProvider, QueryClient } from "react-query";
-import { redirect } from "next/navigation";
-import { getUser } from "../auth/hooks/useUser";
-import { useEffect } from "react";
+"use client";
 
-export default function AuthLayout({ children }) {
-  const queryClient = new QueryClient();
-  // useEffect(()=>{
-  //   const user = getUser();
-  //   return user;
-  // })
-  
-  // if(!user){
-  //   redirect('/auth/login')
-  // }
-  // const isAuthenticated = useIsAuthenticated();
-  // if (!isAuthenticated) {
-  //   return redirect("/auth/login");
-  // }
+import React from "react";
+import NavBar from "../features/home/components/Navbar";
+import Footer from "../features/landing/components/Footer";
+
+export default function Layout({ children }) {
   return (
-    <QueryClientProvider client={queryClient} >
-    { children }
-    </QueryClientProvider>
-  )
-
+    <React.Fragment>
+      <NavBar />
+      <main>{children}</main>
+      <Footer />
+    </React.Fragment>
+  );
 }

@@ -1,7 +1,7 @@
 "use client";
 import React, { Fragment, useState } from "react";
 import { useForm } from "react-hook-form";
-import ModalReminder from "../modalReminder";
+import ModalReminder from "../../reminders/components/modalReminder";
 
 export default function FormNewAppointment() {
   const {

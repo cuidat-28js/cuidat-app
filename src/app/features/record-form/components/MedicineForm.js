@@ -2,7 +2,7 @@
 
  import { useForm } from 'react-hook-form'
  import { useState } from 'react'
- import AddBtn from '../../components/Add-button'
+ import AddBtn from '../../home/components/Add-button'
 
 
 export default function MedicineForm () {

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import AddBtn from "../Add-button";
+import AddBtn from "./Add-button";
 import { MdEditSquare, MdDelete } from "react-icons/md";
 import Link from "next/link";
 

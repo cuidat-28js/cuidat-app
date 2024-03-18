@@ -1,8 +1,6 @@
 "use client"
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import NavBar from "../../components/Navbar";
-import Footer from "../../components/landing-components/Footer";
 import Image from "next/image";
 
 export default function ProfileForm() {
@@ -12,7 +10,6 @@ export default function ProfileForm() {
 
     return(
         <div className="flex min-h-screen lg:w-full flex-col items-center justify-between">
-        <NavBar/>
             <form onSubmit={handleSubmit((data) => {console.log(data);})}
             className="md:w-1/2 flex flex-col w-80 border-2 rounded-lg mt-20 mb-6 pt-4 items-center bg-white shadow-xl shadow-violet-600">
                 <div className="mb-2">
@@ -87,7 +84,6 @@ export default function ProfileForm() {
                     </button>
                 </div>
             </form>
-        <Footer/>
         </div>
     )
 }

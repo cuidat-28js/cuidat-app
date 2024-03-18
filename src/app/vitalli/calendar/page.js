@@ -1,13 +1,11 @@
-import CalendarCompon from "../../components/Calendar"
-import Reminder from "../../components/Reminder"
-import RemindersEmpty from "../../components/home-components/ReminderEmpty"
-import NavBar from "../../components/Navbar"
-import ReminderPost from "../../components/ReminderPost"
+import CalendarCompon from "../../features/reminders/components/Calendar"
+import Reminder from "../../features/reminders/components/Reminder"
+import RemindersEmpty from "../../features/home/components/ReminderEmpty"
+import ReminderPost from "../../features/reminders/components/ReminderPost"
 
 export default function CalendarPage() {
     return (
         <div className="flex min-h-screen lg:w-full flex-col items-center justify-between">
-            <NavBar/>
             <div className="flex flex-shrink justify-center">
                 <div className="flex flex-col justify-between md:w-3/4 mt-20 md:flex-row"> 
                     <div className="md:w-1/2 flex flex-col m-2 md:mr-4 ">

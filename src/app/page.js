@@ -1,16 +1,23 @@
-import Navbar from "./components/Navbar"
-import Footer from "./components/landing-components/Footer";
+import React from "react";
+import Navbar from "./features/home/components/Navbar";
+import Footer from "./features/landing/components/Footer";
+import NavBar from "./features/landing/components/Navbar-landing";
+import HeroSection from "./features/landing/components/HeroSection";
+import ButtonLogin from "./features/landing/components/Button-login";
+import WhatInfo from "./features/landing/components/WhatInfo";
+import Functions from "./features/landing/components/Functions";
+import Benefits from "./features/landing/components/Benefits";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen lg:w-full flex-col items-center justify-between">
-      <div className="circlePosition w-[590px] h-[400px] bg-[#6851FF] rounded-full absolute z-1 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[90px]"></div>
-       
-      <Navbar/>
-      <h1 className="flex flex-col items-center justify-center font-josefin-regular text-xl">
-        HELLO WORLD
-      </h1>
-      <Footer/>
-    </main>
+    <React.Fragment>
+      <NavBar />
+      <HeroSection />
+      <ButtonLogin />
+      <WhatInfo />
+      <Functions />
+      <Benefits />
+      <Footer />
+    </React.Fragment>
   );
 }

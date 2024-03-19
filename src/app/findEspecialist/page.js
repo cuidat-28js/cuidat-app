@@ -1,6 +1,7 @@
-import NavBar from "../components/Navbar"
-import FindEspecialist from "../components/findEspecialist-component/FindEspecialist"
-import Footer from "../components/landing-components/Footer"
+import FindEspecialist from "../components/findEspecialist-component/FindEspecialist";
+import NavBar from "../features/home/components/Navbar";
+import Footer from "../features/landing/components/Footer";
+
 
 export default function newAppointment() {
   

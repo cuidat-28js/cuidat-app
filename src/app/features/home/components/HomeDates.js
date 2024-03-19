@@ -142,58 +142,59 @@ export default function HomeDates() {
             </div>
           </div>
 
-        {/* <div className="collapse collapse-arrow bg-white">
-          <input type="radio" name="my-accordion-2" defaultChecked />
-          <div className="collapse-title flex items-center">
-            <div className="mr-2">
-              <Image
-                src="./icons/lista.svg"
-                width={15}
-                height={15}
-                alt="calendar-icon"
-              />
+          <div className="collapse rounded-none bg-white border border- border-t-0 border-l-0 border-r-0">
+            <input type="checkbox" className="peer" /> 
+            <div className="collapse-title flex items-center">
+              <div className="mr-2">
+                <Image
+                  src="../icons/lista.svg"
+                  width={30}
+                  height={30}
+                  alt="calendar-icon"
+                />
+              </div>
+              <div className="ml-4 text-base font-lato-regular">Psicologo</div>
             </div>
-            <div className=" text-base font-lato-regular">Psicologo</div>
-          </div>
 
-          <div className="collapse-content font-lato-regular md:flex">
-            <div>
-              <Image
-                alt="receta-img"
-                width={200}
-                height={150}
-                src="./ilustrations/big-landing.svg"
-              />
-            </div>
-            <div className="md:ml-8">
-              <p className="font-bold">
-                Costo: <span className="font-normal">$500</span>
-              </p>
-              <p className="font-bold">
-                Diagnostico: <span className="font-normal">Depresion</span>
-              </p>
-              <p className="font-bold">
-                Medicamento: <span className="font-normal">Clonazepam</span>
-              </p>
-              <p className="font-bold">
-                Ubicacion: <span className="font-normal">Plaza san carmen</span>
-              </p>
-              <p className="font-bold">
-                Observaciones:{" "}
-                <span className="font-normal">Salir a caminar</span>
-              </p>
-
-              <div className=" mt-4">
-                <button className="mr-2">
-                  <MdEditSquare style={{ color: "#4D11AF" }} />
-                </button>
-                <button>
-                  <MdDelete style={{ color: "#4D11AF" }} />
-                </button>
+            <div className="collapse-content font-lato-regular md:flex">
+                <div>
+                  <Image
+                    alt="receta-img"
+                    width={200}
+                    height={150}
+                    src="../ilustrations/big-landing.svg"
+                  />
+                </div>
+              <div className="md:ml-8">
+                  <p className="font-bold">
+                    Costo: <span className="font-normal">$500</span>
+                  </p>
+                  <p className="font-bold">
+                    Diagnostico: <span className="font-normal">Depresion</span>
+                  </p>
+                  <p className="font-bold">
+                    Medicamento: <span className="font-normal">Clonazepam</span>
+                  </p>
+                  <p className="font-bold">
+                    Ubicacion: <span className="font-normal">Plaza san carmen</span>
+                  </p>
+                  <p className="font-bold">
+                    Observaciones:{" "}
+                    <span className="font-normal">Salir a caminar</span>
+                  </p>
+                  <div className=" mt-4">
+                    <button className="mr-2">
+                      <MdEditSquare style={{ color: "#4D11AF" }} />
+                    </button>
+                    <button>
+                      <MdDelete style={{ color: "#4D11AF" }} />
+                    </button>
+                  </div>
               </div>
             </div>
           </div>
-        </div> */}
+
+        
 
       </div>
     </React.Fragment>

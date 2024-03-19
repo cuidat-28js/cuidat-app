@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
+    "@react-google-maps/api": "^2.19.3",
     "@reduxjs/toolkit": "^2.2.1",
     "antd": "^5.14.2",
     "clsx": "^2.1.0",

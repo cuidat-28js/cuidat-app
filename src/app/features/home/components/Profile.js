@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { FaFileMedicalAlt } from "react-icons/fa";
 import { useLogout } from "@/app/auth/hooks/useLogout";
+import { useRouter } from "next/navigation";
 
 export default function ProfileEmpty() {
   const [userInfo, setUserInfo] = useState(false);
@@ -12,6 +13,7 @@ export default function ProfileEmpty() {
   };
 
   const getUser = async () => {};
+  const router = useRouter();
 
   return (
     <React.Fragment>
@@ -46,10 +48,11 @@ export default function ProfileEmpty() {
 
         <div className="mt-2">
           <button
+            onClick={()=>router.push('/vitalli/profileForm')}
             type="button"
             className="justify-center rounded m-3 bg-[#6851FF] px-6 pb-2 pt-2 text-xs font-medium text-white hover:bg-white hover:border hover:border-[#6851FF] hover:text-[#6851FF]"
           >
-            <Link href="/vitalli/profileForm">Editar Perfil</Link>
+            Editar Perfil
           </button>
         </div>
       </div>

@@ -6,6 +6,7 @@ import ProfileEmpty from "../../features/home/components/Profile";
 import NewsAsside from "@/app/features/home/components/News";
 
 import React, { useEffect } from "react";
+import NewsAside from "@/app/features/home/components/NewsArcticles";
 
 export default function Home() {
   // useEffect(()=> {
@@ -26,7 +27,7 @@ export default function Home() {
           <HomeDates />
         </main>
         <aside className="md:grid md:col-span-3">
-          <NewsAsside />
+          <NewsAside/>
         </aside>
       </div>
     </div>

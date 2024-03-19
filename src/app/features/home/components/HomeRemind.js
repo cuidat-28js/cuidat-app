@@ -1,14 +1,17 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 export default function HomeRemind() {
+  const router = useRouter();
+
   return (
     <React.Fragment>
       <div>
         <div className="flex flex-col items-center mx-4">
           <h3 className="mt-4 font-josefin-regular text-center font-bold hidden md:block">
-            Recordatorios
+            <button onClick={()=>router.push('/vitalli/calendar')}
+            >Recordatorios</button>
           </h3>
 
           <div className="hidden md:block mt-2 mb-8">

@@ -5,13 +5,13 @@ function SearchBar() {
     <div class="relative flex">
           <input
             type="search"
-            class="w-full border-2 border-gray-100 rounded-xl p-2 mt-1 bg-transparent block flex-auto border-neutral-200 
+            className="w-full border-2 border-gray-100 rounded-xl p-2 mt-1 bg-transparent block flex-auto border-neutral-200 
               text-base font-normal focus:border-primary focus:outline-none"
-            placeholder="Ingresa el nombre p tipo de especialista"
+            placeholder="Ingresa el nombre o tipo de especialista"
             id="search-Map"
           />
           <button
-            class="flex items-center whitespace-nowrap px-3 py-[0.25rem] [&>svg]:h-5 [&>svg]:w-5"
+            className="flex items-center whitespace-nowrap px-3 py-[0.25rem] [&>svg]:h-5 [&>svg]:w-5"
             id="search-Button"
           >
             <svg

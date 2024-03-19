@@ -1,25 +1,29 @@
+'use client'
 import React from "react";
 import Image from "next/image";
 import AddBtn from "./Add-button";
 import { MdEditSquare, MdDelete } from "react-icons/md";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function HomeDates() {
+  const router = useRouter();
+
   return (
     <React.Fragment>
 
-      <div className="border border-gay-300 border-y-0 md:px-3">
-            <div  className="m-2 flex justify-between h-12 sm:space-x-2 md:mx-6">
-                <h3 className="font-josefin-regular text-xl font-extrabold mt-2">Citas</h3>
-                <div className="pt-1 mx-1 text-gray-600">
+      <div className="h-screen overflow-y-auto border border-gay-300 border-y-0 md:px-3">
+        <div  className="m-2 flex justify-between h-12 sm:space-x-2 md:mx-6">
+              <h3 className="font-josefin-regular text-xl font-extrabold mt-2">Citas</h3>
+              <div className="pt-1 mx-1 text-gray-600">
                     <input type="search" placeholder="   Buscar"
                     className="w-17 sm:w-60 lg:w-80 border-2 border-gray-300 bg-white h-8 rounded-full text-sm focus:outline-none"/>
                 </div>
-                <div className="mt-1.5">
-                  <AddBtn />
+                <div className="mt-1.5"
+                onClick={()=>router.push('/vitalli/newAppointment')}>
+                  <AddBtn/>
                 </div>
-            </div>
-
+              </div>
+    
         {/* sin info */}
         {/* <div className="mt-6 rounded flex flex-col items-center shadow p-1 bg-[#F9F9F9]">
                                 <Image
@@ -193,8 +197,8 @@ export default function HomeDates() {
               </div>
             </div>
           </div>
-
         
+          {/* POST ENDS */}
 
       </div>
     </React.Fragment>

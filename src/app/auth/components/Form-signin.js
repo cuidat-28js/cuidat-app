@@ -2,27 +2,41 @@
 import Link from "next/link";
 import React from "react";
 import { useForm } from "react-hook-form";
-import useRegister from "../hooks/useRegister";
+import { userRegisterAPI } from "../api/register";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export default function FormSignin() {
-  const registerMutation = useRegister();
+  const router = useRouter();
   const {
+    reset,
     handleSubmit,
     register,
     formState: { errors },
   } = useForm();
-  
-  const onSubmit = async (data) => {
-    try {
-       registerMutation(data);
-       console.log(data)
-    } catch (error) {
-      console.error('Error signing up:', error);
+
+  const onSubmitRegister = handleSubmit(async (data) => {
+    const result = await userRegisterAPI(data);
+
+    if (result) {
+      const res = await signIn("credentials", {
+        email: data.email,
+        password: data.password,
+        redirect: false,
+      });
+      if (res.error) {
+        console.log(res.error, "errorrrrrrrr");
+      } else {
+        console.log(res, "res register form");
+        router.push("/vitalli/home");
+        reset();
+      }
     }
-  };
+  });
+
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={onSubmitRegister}
       className="bg-red px-10 py-20 rounded-3xl border-gray-100"
     >
       <h1 className="text-5xl font-semibold font-josefin-regular">
@@ -42,7 +56,7 @@ export default function FormSignin() {
             type="email"
             className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
             placeholder="Ingresa tu correo electrónico"
-            {...register("email", { 
+            {...register("email", {
               required: "*Éste campo es obligatorio",
             })}
           />
@@ -64,8 +78,9 @@ export default function FormSignin() {
               required: "Éste campo es obligatorio",
               pattern: {
                 value:
-                /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/,
-                message: "Includes lowercase, uppercase, special character%, minimum 8 characters"
+                  /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/,
+                message:
+                  "Includes lowercase, uppercase, special character%, minimum 8 characters",
               },
             })}
           />

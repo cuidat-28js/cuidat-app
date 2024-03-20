@@ -1,17 +1,22 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import Link from "next/link";
-import { FaFileMedicalAlt } from "react-icons/fa";
-import { useLogout } from "@/app/auth/hooks/useLogout";
+import { useSession } from "next-auth/react";
+import { getUserInfoAPI } from "../api/userProfile";
+const BACK_URL = process.env.NEXT_PUBLIC_BACK_URL;
 
-export default function ProfileEmpty() {
-  const [userInfo, setUserInfo] = useState(false);
-  const { logout } = useLogout();
-  const handleClick = () => {
-    logout();
-  };
+export default function Profile() {
+  const { data: session, status } = useSession();
+  const [userInfo, setUserInfo] = useState({});
 
-  const getUser = async () => {};
+  useEffect(() => {
+    const getData = async () => {
+      const res = await getUserInfoAPI();
+      setUserInfo(res.data.user);
+    };
+
+    getData();
+  }, []);
 
   return (
     <React.Fragment>
@@ -29,13 +34,15 @@ export default function ProfileEmpty() {
                 alt="profile placeholder"/> */}
 
         <div className="mt-4 text-center">
-          <p className="text-lg font-extrabold"> Jhon Alejandro</p>
+          <p className="text-lg font-extrabold">{`${userInfo.name} ${userInfo.lastName}`}</p>
           <div>
-            <p className="text-md">Edad: 18</p>
-            <p className="text-md">Sexo: Masculino</p>
-            <p className="text-md">Telefono: 978 098 091</p>
-            <p className="text-md">Fecha de nacimiento: 12/05/2005 </p>
-            <p className="text-md">Domicilio: Rosario esquina Union</p>
+            <p className="text-md">Edad: {userInfo.age}</p>
+            <p className="text-md">Sexo: {userInfo.gender}</p>
+            <p className="text-md">Telefono: {userInfo.telephone}</p>
+            <p className="text-md">
+              Fecha de nacimiento: {userInfo.birthdate}{" "}
+            </p>
+            <p className="text-md">Domicilio: {userInfo.adress}</p>
           </div>
         </div>
         {/* <div className="border rounded m-2 bg-[#F9F9F9] py-4 px-2">
@@ -54,11 +61,11 @@ export default function ProfileEmpty() {
         </div>
       </div>
 
-      <div className="flex justify-center">
+      {/* <div className="flex justify-center">
         <button onClick={handleClick} className="btn btn-active btn-primary">
           cerrar sesion
         </button>
-      </div>
+      </div> */}
 
       {/* <div className="hidden md:flex divider"></div> */}
 

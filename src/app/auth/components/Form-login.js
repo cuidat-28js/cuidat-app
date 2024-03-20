@@ -2,29 +2,36 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
-import  {useLogin}  from "../hooks/useLogin";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export default function FormLogin() {
-  const logInMutation = useLogin();
-
+  const router = useRouter();
   const {
+    reset,
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (data) => {
-    try {
-       logInMutation(data);
-       console.log(data)
-    } catch (error) {
-      console.error('Error signing up:', error);
+  const onSubmitLogin = handleSubmit(async (data) => {
+    const res = await signIn("credentials", {
+      email: data.email,
+      password: data.password,
+      redirect: false,
+    });
+    if (res.error) {
+      console.log(res.error, "errorrrrrrrr");
+    } else {
+      console.log(res, "res login form");
+      router.push("/vitalli/home");
+      reset();
     }
-  };
+  });
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={onSubmitLogin}
       className="bg-white px-10 py-20 rounded-3xl border-gray-100"
     >
       <h1 className="text-5xl font-semibold text-center">Iniciar sesión</h1>

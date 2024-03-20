@@ -51,6 +51,7 @@ export default function NavBar() {
             }`}
           >
             <ul className="h-screen md:h-auto items-center md:justify-center md:flex ">
+              {/* NEXT BUTTON */}
               <li className=" font-josefin-regular text-lg mt-1 py-2 px-3 md:py-1 md:px-6 text-end border-b-2 md:border-b-0 border-primary">
                 <button
                   onClick={()=>router.push('/vitalli/record')}
@@ -66,6 +67,7 @@ export default function NavBar() {
                   Expediente
                 </button>
               </li>
+              {/* NEXT BUTTON */}
               <li className="font-josefin-regular text-lg mt-1 py-2 px-3 md:py-1 md:px-6 text-end border-b-2 md:border-b-0 border-primary">
                 <button
                   onClick={()=>router.push('/vitalli/calendar')}
@@ -81,6 +83,7 @@ export default function NavBar() {
                   Calendario
                 </button>
               </li>
+              {/* NEXT BUTTON */}
               <li className="font-josefin-regular text-lg mt-1  py-2 md:py-1 px-3 text-end border-b-2 md:border-b-0 border-primary">
                 <div
                   onClick={()=>router.push('/vitalli/home')}
@@ -96,12 +99,9 @@ export default function NavBar() {
                   Especialistas
                 </div>
               </li>
-              <li className="font-josefin-regular text-lg mt-1 py-4 md:ml-5 md:py-0.5 px-3 border-b-2 md:border-b-0 border-primary md:text-white md:bg-primary md:rounded-full">
-                <Link
-                  href="#contact"
-                  onClick={() => setNavbar(!navbar)}
-                  className="flex justify-between"
-                >
+              {/* LAST BUTTON */}
+              <li className="dropdown dropdown-end">
+                <div tabIndex={0} role="button" className="btn btn-sm font-josefin-regular text-md rounded-full border-b-2 md:border-b-0 border-primary md:text-white md:bg-primary md:rounded-md">
                   <Image
                     src="icons/arrow-down.svg"
                     width={25}
@@ -109,8 +109,10 @@ export default function NavBar() {
                     alt="icono flecha"
                     className="md:hidden"
                   />
-                  ¡Hola Jhon!
-                </Link>
+                  ¡Hola Jhon!</div>
+                  <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-36 mt-4">
+                    <li><button className="text-primary">Cerrar Sesion</button></li> 
+                  </ul>
               </li>
             </ul>
           </div>

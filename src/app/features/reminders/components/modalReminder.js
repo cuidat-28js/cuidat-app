@@ -1,6 +1,6 @@
-"use client";
-import React from "react";
-import { useForm } from "react-hook-form";
+"use client"
+import React from "react"
+import { useForm } from "react-hook-form"
 
 const ModalReminder = ({ isVisible, onClose, children }) => {
   const {
@@ -12,8 +12,8 @@ const ModalReminder = ({ isVisible, onClose, children }) => {
   if (!isVisible) return null;
 
   const handleClose = (e) => {
-    if (e.target.id === "wrapper") onClose();
-  };
+    if (e.target.id === "wrapper") onClose()
+  }
 
   return (
     <div
@@ -120,4 +120,4 @@ const ModalReminder = ({ isVisible, onClose, children }) => {
   );
 };
 
-export default ModalReminder;
+export default ModalReminder

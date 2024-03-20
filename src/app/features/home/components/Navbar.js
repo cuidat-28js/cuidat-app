@@ -2,18 +2,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function NavBar() {
+  const router = useRouter();
   const [navbar, setNavbar] = useState(false);
+  
   return (
     <nav className="shadow-lg shadow-violet-200 w-full bg-white fixed top-0 left-0 right-0 z-10">
       <div className="justify-between py-0 my-0 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between ml-4 py-1 md:py-3 md:block">
             {/* LOGO */}
-            <Link href="/vitalli/home" className="mt-0">
+            <button onClick={()=>router.push('/vitalli/home')} className="mt-0">
               <Image src="/logo-lg.svg" width={80} height={30} alt="logo" />
-            </Link>
+            </button>
             {/* HAMBURGER BUTTON FOR MOBILE */}
             <div className="md:hidden">
               <button
@@ -48,69 +51,69 @@ export default function NavBar() {
             }`}
           >
             <ul className="h-screen md:h-auto items-center md:justify-center md:flex ">
+              {/* NEXT BUTTON */}
               <li className=" font-josefin-regular text-lg mt-1 py-2 px-3 md:py-1 md:px-6 text-end border-b-2 md:border-b-0 border-primary">
-                <Link
-                  href="/vitalli/record"
-                  onClick={() => setNavbar(!navbar)}
+                <div
+                  onClick={()=>router.push('/vitalli/record')}
                   className="flex justify-between"
                 >
                   <Image
-                    src="icons/mesage-icon.svg"
+                    src="../icons/mesage-icon.svg"
                     width={30}
                     height={30}
                     alt="icono mensaje"
                     className="md:hidden"
                   />
-                  Expediente
-                </Link>
+                  <button>Expediente</button>
+                </div>
               </li>
+              {/* NEXT BUTTON */}
               <li className="font-josefin-regular text-lg mt-1 py-2 px-3 md:py-1 md:px-6 text-end border-b-2 md:border-b-0 border-primary">
-                <Link
-                  href="/vitalli/calendar"
-                  onClick={() => setNavbar(!navbar)}
+                <div
+                  onClick={()=>router.push('/vitalli/calendar')}
                   className="flex justify-between"
                 >
                   <Image
-                    src="icons/calendar-icon.svg"
+                    src="../icons/calendar-icon.svg"
                     width={30}
                     height={30}
                     alt="icono calendario"
                     className="md:hidden"
                   />
-                  Calendario
-                </Link>
+                  <button>Calendario</button>
+                </div>
               </li>
-              <li className="font-josefin-regular text-lg mt-1  py-2 md:py-1 px-3 text-end border-b-2 md:border-b-0 border-primary">
-                <Link
-                  href="#blog"
-                  onClick={() => setNavbar(!navbar)}
+              {/* NEXT BUTTON */}
+              <li className="font-josefin-regular text-lg mt-1 py-2 md:py-1 px-3 text-end border-b-2 md:border-b-0 border-primary">
+                <div
+                  onClick={()=>router.push('/vitalli/home')}
                   className="flex justify-between"
                 >
                   <Image
-                    src="icons/location-icon.svg"
+                    src="../icons/location-icon.svg"
                     width={30}
                     height={30}
                     alt="icono locacion"
                     className="md:hidden"
                   />
-                  Especialistas
-                </Link>
+                  <button> Especialistas </button>
+                </div>
               </li>
-              <li className="font-josefin-regular text-lg mt-1 py-4 md:ml-5 md:py-0.5 px-3 border-b-2 md:border-b-0 border-primary md:text-white md:bg-primary md:rounded-full">
-                <Link
-                  href="#contact"
-                  onClick={() => setNavbar(!navbar)}
-                  className="flex justify-between"
-                >
+              {/* LAST BUTTON */}
+              <li className="dropdown dropdown-end mt-4 md:mt-0 ml-2">
+                <div tabIndex={0} role="button" 
+                className="btn w-8/9 md:btn-sm font-josefin-regular flex justify-between text-md border-b-2 md:border-b-0 border-primary md:text-white md:bg-primary md:rounded-md">
                   <Image
-                    src="icons/arrow-down.svg"
+                    src="../icons/arrow-down.svg"
                     width={25}
                     height={30}
                     alt="icono flecha"
                     className="md:hidden"
                   />
-                  ¡Hola Jhon!
-                </Link>
+                  ¡Hola Jhon!</div>
+                  <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 shadow bg-base-100 w-36 mt-4">
+                    <li><button className="text-primary">Cerrar Sesion</button></li> 
+                  </ul>
               </li>
             </ul>
           </div>

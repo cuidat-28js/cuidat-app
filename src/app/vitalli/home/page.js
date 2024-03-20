@@ -27,7 +27,7 @@ export default function Home() {
           <HomeDates />
         </main>
         <aside className="md:grid md:col-span-3">
-          <NewsAsside />
+          <NewsAside/>
         </aside>
       </div>
     </div>

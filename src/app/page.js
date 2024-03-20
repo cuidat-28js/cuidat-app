@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./features/home/components/Navbar";
 import Footer from "./features/landing/components/Footer";
 import NavBar from "./features/landing/components/Navbar-landing";
 import HeroSection from "./features/landing/components/HeroSection";

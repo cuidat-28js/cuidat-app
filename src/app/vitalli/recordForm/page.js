@@ -2,8 +2,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import AllergyForm from "@/app/features/record-form/components/AllergyForm";
 import MedicineForm from "@/app/features/record-form/components/MedicineForm";
 import BloodForm from "@/app/features/record-form/components/BloodGroupForm";
@@ -16,6 +15,8 @@ export default function RecordForm() {
     register,
     formState: { errors },
   } = useForm();
+
+  const router = useRouter();
 
   return (
     <div
@@ -72,8 +73,9 @@ export default function RecordForm() {
           </div>
           {/* end block */}
           <div className="flex w-66 bg-white items-center mt-2 mb-6 md:mt-6">
-            <button className="btn btn-wide btn-primary text-md md:text-lg hover:bg-white hover:border-primary hover:text-primary">
-              <Link href="/vitalli/record">Finalizar Editar</Link>
+            <button onClick={()=>router.push('/vitalli/record')}
+            className="btn btn-wide btn-primary text-md md:text-lg hover:bg-white hover:border-primary hover:text-primary">
+              Finalizar Editar
             </button>
           </div>
         </div>

@@ -3,7 +3,7 @@
 import HomeRemind from "../../features/home/components/HomeRemind";
 import HomeDates from "../../features/home/components/HomeDates";
 import Profile from "../../features/home/components/Profile";
-import NewsAside from "@/app/features/home/components/News";
+import NewsAside from "@/app/features/home/components/NewsArcticles";
 
 import React from "react";
 import { useSession } from "next-auth/react";
@@ -27,7 +27,7 @@ export default function Home() {
           <HomeDates />
         </main>
         <aside className="md:grid md:col-span-3">
-          <NewsAsside/>
+          <NewsAside/>
         </aside>
       </div>
     </div>

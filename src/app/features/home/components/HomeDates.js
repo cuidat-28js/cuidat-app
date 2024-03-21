@@ -11,7 +11,7 @@ export default function HomeDates() {
   return (
     <React.Fragment>
 
-      <div className="h-screen overflow-y-auto border border-gay-300 border-y-0 md:px-3">
+      <div className="h-80 md:h-screen overflow-y-auto border border-gay-300 border-y-0 md:px-3">
         <div  className="m-2 flex justify-between h-12 sm:space-x-2 md:mx-6">
               <h3 className="font-josefin-regular text-xl font-extrabold mt-2">Citas</h3>
               <div className="pt-1 mx-1 text-gray-600">

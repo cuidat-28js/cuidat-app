@@ -65,14 +65,14 @@ function NavBar() {
                     Beneficios
                   </Link>
                 </li>
-                <li className="pb-2  font-lato-regular text-violetVitalli py-2 px-6 text-center hover:text-violetVitalli hover:font-bold md:border-b-0 border-purple-900 md:hover:font-bold md:hover:bg-transparent md:text-xs lg:text-lg">
-                  <Link href="/login" onClick={() => setNavbar(!navbar)}>
+                <li className="pb-2  font-lato-regular text-violetVitalli py-2 px-6 text-center hover:text-violetVitalli md:border-b-0 border-purple-900 hover:bg-gray-100 hover:shadow-[#4D11AF] md:hover:bg-transparent md:text-xs lg:text-lg">
+                  <button onClick={()=>router.push("/login")}>
                     Inicia Sesion
-                  </Link>
+                  </button>
                 </li>
                 <li className="pb-2 text-l font-lato-regular py-2 px-2 text-center md:border-b-0 md:hover:text-violetVitalli md:hover:bg-transparent">
                   <button
-                    className="btn rounded-full bg-[#4D11AF]  text-[#ffff] hover:bg-[#4D11AF] hover:shadow-[#4D11AF] hover:border-[#4D11AF] md:text-xs lg:text-lg"
+                    className="btn rounded-full bg-[#4D11AF] text-[#ffff] hover:bg-[#4D11AF] hover:shadow-[#4D11AF] hover:border-[#4D11AF] md:text-xs lg:text-lg"
                     onClick={() => router.push("/signin")}
                   >
                     ¡Registrate!

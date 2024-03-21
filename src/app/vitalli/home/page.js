@@ -3,7 +3,7 @@
 import HomeRemind from "../../features/home/components/HomeRemind";
 import HomeDates from "../../features/home/components/HomeDates";
 import Profile from "../../features/home/components/Profile";
-import NewsAsside from "@/app/features/home/components/News";
+import NewsAside from "@/app/features/home/components/News";
 
 import React from "react";
 import { useSession } from "next-auth/react";

@@ -1,13 +1,13 @@
 "use client";
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import Link from "next/link";
-
+import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { getUserInfoAPI } from "../api/userProfile";
 const BACK_URL = process.env.NEXT_PUBLIC_BACK_URL;
 
 
 export default function Profile() {
+  const router = useRouter();
   const { data: session, status } = useSession();
   const [userInfo, setUserInfo] = useState({});
 

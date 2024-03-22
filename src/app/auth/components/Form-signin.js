@@ -17,7 +17,7 @@ export default function FormSignin() {
 
   const onSubmitRegister = handleSubmit(async (data) => {
     const result = await userRegisterAPI(data);
-
+    console.log('RESULT',result)
     if (result) {
       const res = await signIn("credentials", {
         email: data.email,

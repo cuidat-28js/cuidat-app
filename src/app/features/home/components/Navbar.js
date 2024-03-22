@@ -3,8 +3,10 @@ import Image from "next/image";
 import { signOut } from "next-auth/react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 
 export default function NavBar() {
+  const { data: session, status } = useSession();
   const router = useRouter();
   const [navbar, setNavbar] = useState(false);
 
@@ -116,7 +118,7 @@ export default function NavBar() {
                     alt="icono flecha"
                     className="md:hidden"
                   />
-                  ¡Hola Jhon!
+                  ¡Hola {session?.user.email}!
                 </div>
                 <ul
                   tabIndex={0}

@@ -2,6 +2,7 @@
 import React, { Fragment, useState } from "react"
 import { useForm } from "react-hook-form"
 import ModalReminder from "../../features/reminders/components/modalReminder"
+import AutocompleteAdressInput from "@/app/features/new-appointment/components/autocompleteAPI"
 
 export default function FormNewAppointment() {
   const {
@@ -79,22 +80,8 @@ export default function FormNewAppointment() {
               <p className="text-[12px] text-red-600">
                 {errors.specialist?.message}
               </p>
-            </div>
-            <div>
-              <label
-                htmlFor="adress-appointment"
-                className="text-base font-medium"
-              >
-                Dirección
-              </label>
-              <input
-                id="adress-appointment"
-                type="text"
-                placeholder="Ingresa la dirección o liga de ubicación"
-                className="w-full py-2 border-2 rounded-md p-4 mt-1 bg-transparent border-violet-800 shadow-md"
-                {...register("adress")}
-              />
-            </div>
+            </div>  
+            <AutocompleteAdressInput />
             <div>
               <label
                 htmlFor="sintoms-appointment"
@@ -166,6 +153,7 @@ export default function FormNewAppointment() {
           </div>
         </form>
       </div>
+      
       <ModalReminder
         isVisible={showModal}
         onClose={() => setShowModal(false)}

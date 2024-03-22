@@ -1,17 +1,16 @@
 const BACK_URL = process.env.NEXT_PUBLIC_BACK_URL;
 import { getSession } from "next-auth/react";
-
-export async function updatedUserProfileAPI(data) {
-  console.log(data, "DATA");
+export async function getUserAppointmentsAPI() {
   try {
     const session = await getSession();
-    const response = await fetch(`${BACK_URL}/user/editProfile`, {
-      method: "PATCH",
+    const response = await fetch(`${BACK_URL}/appointment/`, {
+      method: "GET",
       headers: {
-        "Content-Type": "application/json",
         Authorization: `Bearer ${session.jwt}`,
       },
-      body: JSON.stringify(data),
+      next: {
+        revalidate: 500,
+      },
     });
     const jsonResponse = await response.json();
     return jsonResponse;
@@ -20,11 +19,11 @@ export async function updatedUserProfileAPI(data) {
   }
 }
 
-export async function getUserInfoAPI() {
+export async function deleteAppointmentAPI(id) {
   try {
     const session = await getSession();
-    const response = await fetch(`${BACK_URL}/user/profile`, {
-      method: "GET",
+    const response = await fetch(`${BACK_URL}/appointment/delete/${id}`, {
+      method: "DELETE",
       headers: {
         Authorization: `Bearer ${session.jwt}`,
       },

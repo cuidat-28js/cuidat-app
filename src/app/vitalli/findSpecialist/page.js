@@ -1,12 +1,10 @@
-"use client";
-import React, { useState } from "react";
-import RangeSelect from "./RangeSelect";
-import ResultsList from "./ResultsList";
-import SelectRating from "./SelectRating";
-import GoogleMapView from "./GoogleMapView";
+"use client"
+import React, { useState } from "react"
+import ResultsList from "./ResultsList"
+import GoogleMapView from "./GoogleMapView"
 
-export default function FindEspecialist() {
-  const [radius, setRadius] = useState(10);
+export default function FindSpecialist() {
+  const [radius, setRadius] = useState(10)
   return (
     <div className="grid grid-cols-4 h-screen mt-12">
       <div className="p-3">
@@ -52,7 +50,6 @@ export default function FindEspecialist() {
         </label>
         <div className="p-3">
           <ResultsList />
-          <SelectRating />
         </div>
       </div>
       <div className="col-span-3">

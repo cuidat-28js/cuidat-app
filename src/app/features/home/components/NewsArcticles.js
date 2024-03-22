@@ -29,22 +29,27 @@ export default function NewsAside() {
     fetchArticles();
   }, []);
 
-    return (
-      <div className="flex flex-col items-center">
-        <h1 className="justify-center md:mb-3 font-josefin-regular text-lg">Articulos Recomendados</h1>
-        <div className="h-56 md:h-2/3 overflow-x-auto md:overflow-y-auto items-center">
-          <div className="flex flex-row md:flex-col">
-          {articles.slice(0, 4).map((article, index) => (
-              <a href={article.url} key={index} className="min-w-48 max-h-38 md:w-48 rounded-lg shadow-md p-2 md:mb-4 md:last:mb-0">
-                <img src={article.urlToImage} alt="imagen de articulo" width={200} />
-                <div className="p-2">
-                  <p className="text-xs md:text-sm">{article.title}</p>
-                </div>
-              </a>
-          ))}
-          </div>
-        </div>
+  return (
+    <aside className="mx-2 h-44 md:h-screen overflow-x-auto md:overflow-y-auto items-center">
+      <h1 className="justify-center font-bold">Articulos Recomendados</h1>
+      <div className="overflow-x-auto md:overflow-y-auto flex flex-row md:flex-col">
+        {articles.slice(0, 5).map((article, index) => (
+          <a
+            href={article.url}
+            key={index}
+            className="rounded-lg w-66 shadow-md p-2 md:mb-4 md:last:mb-0"
+          >
+            <img
+              src="../../ilustrations/grupo-salud.svg"
+              alt="imagen de articulo"
+              width={250}
+            />
+            <div className="p-2">
+              <p className="text-sm">{article.title}</p>
+            </div>
+          </a>
+        ))}
       </div>
-    )
-
+    </aside>
+  );
 }

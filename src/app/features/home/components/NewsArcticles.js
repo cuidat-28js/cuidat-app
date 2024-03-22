@@ -34,7 +34,7 @@ export default function NewsAside () {
         <div className="flex flex-row md:flex-col">
         {articles.slice(0, 4).map((article, index) => (
             <a href={article.url} key={index} className="min-w-48 max-h-38 md:w-48 rounded-lg shadow-md p-2 md:mb-4 md:last:mb-0">
-              <img src={article.urlToImage} alt="imagen de articulo" width={200} />
+              <img src="../../ilustrations/grupo-salud.svg" alt="imagen de articulo" width={200} />
               <div className="p-2">
                 <p className="text-xs md:text-sm">{article.title}</p>
               </div>

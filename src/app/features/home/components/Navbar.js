@@ -7,6 +7,7 @@ import { useSession } from "next-auth/react";
 
 export default function NavBar() {
   const { data: session, status } = useSession();
+  console.log(session?.user?.email, 'session')
   const router = useRouter();
   const [navbar, setNavbar] = useState(false);
 
@@ -118,7 +119,7 @@ export default function NavBar() {
                     alt="icono flecha"
                     className="md:hidden"
                   />
-                  ¡Hola {session?.user.email}!
+                  ¡Hola {session?.user?.email}!
                 </div>
                 <ul
                   tabIndex={0}

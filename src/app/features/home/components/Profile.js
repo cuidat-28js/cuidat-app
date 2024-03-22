@@ -9,7 +9,7 @@ export default function Profile() {
   const router = useRouter();
   const { data: session, status } = useSession();
   const [userInfo, setUserInfo] = useState({});
-
+console.log(session)
   useEffect(() => {
     const getData = async () => {
       const res = await getUserInfoAPI();

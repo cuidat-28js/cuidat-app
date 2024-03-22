@@ -1,10 +1,10 @@
-"use client"
-import React, { useState } from "react"
-import ResultsList from "./ResultsList"
-import GoogleMapView from "./GoogleMapView"
+"use client";
+import GoogleMapView from "@/app/features/findEspecialist/components/GoogleMapView";
+import ResultsList from "@/app/features/findEspecialist/components/ResultsList";
+import React, { useState } from "react";
 
 export default function FindSpecialist() {
-  const [radius, setRadius] = useState(10)
+  const [radius, setRadius] = useState(10);
   return (
     <div className="grid grid-cols-4 h-screen mt-12">
       <div className="p-3">
@@ -53,7 +53,7 @@ export default function FindSpecialist() {
         </div>
       </div>
       <div className="col-span-3">
-        <GoogleMapView/>
+        <GoogleMapView />
       </div>
     </div>
   );

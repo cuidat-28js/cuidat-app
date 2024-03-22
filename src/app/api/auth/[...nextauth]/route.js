@@ -16,11 +16,10 @@ const handler = NextAuth({
       },
       async authorize(credentials, req) {
         const result = await userLoginAPI(credentials);
-        const user = result.user;
         console.log(result, 'result')
-        if (user) {
+        if (result.user) {
           return {
-            user,
+            user: result.user,
             jwt: result.token,
           };
         } else {
@@ -34,7 +33,7 @@ const handler = NextAuth({
       if (user) {
         return {
           ...token,
-          user: user._id,
+           user,
           jwt: user.jwt,
         };
       }
@@ -42,6 +41,7 @@ const handler = NextAuth({
     },
     session: async ({ session, token }) => {
       if (token) {
+        session.user = token.user.user;
         session.jwt = token.jwt;
       }
       console.log(session, 'sessiooon')

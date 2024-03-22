@@ -3,7 +3,7 @@ import Image from "next/image";
 import { signOut } from "next-auth/react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { useSession } from "next-auth/react";
+import { useSession, getSession } from "next-auth/react";
 
 export default function NavBar() {
   const { data: session, status } = useSession();

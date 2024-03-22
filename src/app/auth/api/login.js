@@ -8,9 +8,9 @@ export async function userLoginAPI(data) {
       },
       body: JSON.stringify(data),
     });
-    const jsonResponse = await response.json();
-    console.log(jsonResponse, 'aqui que')
-    return jsonResponse;
+    const user = await response.json();
+    console.log(user, 'aqui que')
+    return user;
   } catch (error) {
     console.log(error, "error al crear la solicitud");
   }

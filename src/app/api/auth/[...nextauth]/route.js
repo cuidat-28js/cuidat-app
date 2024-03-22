@@ -16,10 +16,11 @@ const handler = NextAuth({
       },
       async authorize(credentials, req) {
         const result = await userLoginAPI(credentials);
+        const user = result.user;
         console.log(result, 'result')
-        if (result.user) {
+        if (user) {
           return {
-            ...result.user,
+            user,
             jwt: result.token,
           };
         } else {

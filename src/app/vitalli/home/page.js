@@ -1,7 +1,7 @@
 "use client";
 
 import HomeRemind from "../../features/home/components/HomeRemind";
-import HomeDates from "../../features/home/components/HomeDates";
+import HomeAppointments from "../../features/home/components/HomeAppointments";
 import Profile from "../../features/home/components/Profile";
 import NewsAside from "@/app/features/home/components/NewsArcticles";
 
@@ -24,7 +24,7 @@ export default function Home() {
           <HomeRemind />
         </aside>
         <main className="md:grid md:col-span-6">
-          <HomeDates />
+          <HomeAppointments/>
         </main>
         <aside className="md:grid md:col-span-3">
           <NewsAside/>

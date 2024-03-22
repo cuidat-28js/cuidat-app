@@ -9,8 +9,6 @@ export async function userRegisterAPI(data) {
       body: JSON.stringify(data),
     });
     const jsonResponse = await response.json();
-    const token = jsonResponse.token;
-    localStorage.setItem('token', token);
     return jsonResponse;
   } catch (error) {
     console.log(error, "error al crear la solicitud");

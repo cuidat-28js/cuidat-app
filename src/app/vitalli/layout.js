@@ -8,7 +8,7 @@ import Footer from "../features/landing/components/Footer";
 export default function Layout({ children }) {
   return (
     <React.Fragment>
-      <SessionProvider>
+      <SessionProvider refetchInterval={24 * 60 * 60}>
           {/* <Loading/> */}
           <NavBar />
           <main>{children}</main>

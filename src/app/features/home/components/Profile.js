@@ -1,10 +1,9 @@
 "use client";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { getUserInfoAPI } from "../api/userProfile";
 const BACK_URL = process.env.NEXT_PUBLIC_BACK_URL;
-
 
 export default function Profile() {
   const router = useRouter();
@@ -55,7 +54,7 @@ export default function Profile() {
 
         <div className="mt-2">
           <button
-            onClick={()=>router.push('/vitalli/profileForm')}
+            onClick={() => router.push("/vitalli/profileForm")}
             type="button"
             className="justify-center rounded m-3 bg-[#6851FF] px-6 pb-2 pt-2 text-xs font-medium text-white hover:bg-white hover:border hover:border-[#6851FF] hover:text-[#6851FF]"
           >

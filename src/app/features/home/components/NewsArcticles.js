@@ -1,12 +1,12 @@
-let key = 'ec21816683df4f9dbdedd1a16e488af1';
-let url = 'https://newsapi.org/v2/top-headlines?country=mx&category=health&apiKey=ec21816683df4f9dbdedd1a16e488af1'
+let key = "ec21816683df4f9dbdedd1a16e488af1";
+let url =
+  "https://newsapi.org/v2/top-headlines?country=mx&category=health&apiKey=ec21816683df4f9dbdedd1a16e488af1";
 import React from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-export default function NewsAside () {
-
-    const [articles, setArticles] = useState([]);
+export default function NewsAside() {
+  const [articles, setArticles] = useState([]);
 
     useEffect(() => {
         // Fetch articles from the news API
@@ -46,5 +46,3 @@ export default function NewsAside () {
     )
 
 }
-
-

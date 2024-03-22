@@ -56,10 +56,7 @@ export default function NavBar() {
             <ul className="h-screen md:h-auto items-center md:justify-center md:flex ">
               {/* NEXT BUTTON */}
               <li className=" font-josefin-regular text-lg mt-1 py-2 px-3 md:py-1 md:px-6 text-end border-b-2 md:border-b-0 border-primary">
-                <div
-                  onClick={() => router.push("/vitalli/record")}
-                  className="flex justify-between"
-                >
+                <div className="flex justify-between">
                   <Image
                     src="../icons/mesage-icon.svg"
                     width={30}
@@ -67,15 +64,14 @@ export default function NavBar() {
                     alt="icono mensaje"
                     className="md:hidden"
                   />
-                  <button>Expediente</button>
+                  <button onClick={() => router.push("/vitalli/record")}>
+                    Expediente
+                  </button>
                 </div>
               </li>
               {/* NEXT BUTTON */}
               <li className="font-josefin-regular text-lg mt-1 py-2 px-3 md:py-1 md:px-6 text-end border-b-2 md:border-b-0 border-primary">
-                <div
-                  onClick={() => router.push("/vitalli/calendar")}
-                  className="flex justify-between"
-                >
+                <div className="flex justify-between">
                   <Image
                     src="../icons/calendar-icon.svg"
                     width={30}
@@ -83,15 +79,14 @@ export default function NavBar() {
                     alt="icono calendario"
                     className="md:hidden"
                   />
-                  <button>Calendario</button>
+                  <button onClick={() => router.push("/vitalli/calendar")}>
+                    Calendario
+                  </button>
                 </div>
               </li>
               {/* NEXT BUTTON */}
               <li className="font-josefin-regular text-lg mt-1 py-2 md:py-1 px-3 text-end border-b-2 md:border-b-0 border-primary">
-                <div
-                  onClick={() => router.push("/vitalli/home")}
-                  className="flex justify-between"
-                >
+                <div className="flex justify-between">
                   <Image
                     src="../icons/location-icon.svg"
                     width={30}
@@ -99,7 +94,12 @@ export default function NavBar() {
                     alt="icono locacion"
                     className="md:hidden"
                   />
-                  <button> Especialistas </button>
+                  <button
+                    onClick={() => router.push("/vitalli/find-specialist")}
+                  >
+                    {" "}
+                    Especialistas{" "}
+                  </button>
                 </div>
               </li>
               {/* LAST BUTTON */}

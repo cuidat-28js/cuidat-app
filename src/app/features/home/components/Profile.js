@@ -86,10 +86,12 @@ export default function Profile() {
               </div>
             </div>
           </div>
-          <div className="stat-title font-extrabold text-[#000]">jhonnn</div>
-          <div className="stat-desc ">Edad: 19</div>
-          <div className="stat-desc">Genero: Masculino</div>
-          <div className="stat-desc">Grupo sanguineo: O+</div>
+          <div className="stat-title font-extrabold text-[#000]">
+            {userInfo.name} {userInfo.lastName}
+          </div>
+          <div className="stat-desc ">Edad: {userInfo.age}</div>
+          <div className="stat-desc">Genero: {userInfo.gender}</div>
+          <div className="stat-desc">Telefono: {userInfo.telephone}</div>
         </div>
       </div>
     </React.Fragment>

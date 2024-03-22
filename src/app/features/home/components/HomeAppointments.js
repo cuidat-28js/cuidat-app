@@ -122,11 +122,13 @@ export default function HomeAppointments() {
                   <span className="font-normal">Salir a caminar</span>
                 </p>
                 <div className=" mt-4">
-                  <button className="mr-2">
+                  <button 
+                  className="mr-2 hover:bg-indigo-100">
                     <MdEditSquare style={{ color: "#4D11AF" }} />
                   </button>
 
                   <button
+                    className="hover:bg-indigo-100"
                     onClick={() =>
                       document.getElementById("deleteAppo").showModal()
                     }

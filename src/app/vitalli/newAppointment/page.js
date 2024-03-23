@@ -3,8 +3,12 @@ import React, { Fragment, useState } from "react"
 import { useForm } from "react-hook-form"
 import ModalReminder from "../../features/reminders/components/modalReminder"
 import AutocompleteAdressInput from "@/app/features/new-appointment/components/autocompleteAPI"
+import { useRouter } from "next/router"
 
 export default function FormNewAppointment() {
+
+  const router = useRouter()
+
   const {
     register,
     handleSubmit,
@@ -146,6 +150,7 @@ export default function FormNewAppointment() {
               <button
                 type="submit"
                 className="mt-10 w-9/12 active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all py-3 rounded-xl bg-violet-500 text-white text-lg font-bold"
+                onClick={() => router.push('/home')}
               >
                 Guardar
               </button>

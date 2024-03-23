@@ -20,12 +20,13 @@ export default function FormLogin() {
       password: data.password,
       redirect: false,
     });
-    if (res.error) {
-      console.log(res.error, "errorrrrrrrr");
-    } else {
+    console.log('RES', res)
+    if (res.ok) {
       console.log(res, "res login form");
       router.push("/vitalli/home");
       reset();
+    } else {
+      console.log(res.error, "errorrrrrrrr");
     }
   });
 

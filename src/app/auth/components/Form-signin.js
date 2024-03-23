@@ -24,12 +24,12 @@ export default function FormSignin() {
         password: data.password,
         redirect: false,
       });
-      if (res.error) {
-        console.log(res.error, "errorrrrrrrr");
-      } else {
+      if (res.ok) {
         console.log(res, "res register form");
         router.push("/vitalli/home");
         reset();
+      } else {
+        console.log(res.error, "errorrrrrrrr");
       }
     }
   });

@@ -7,13 +7,15 @@ import { useRouter } from "next/router"
 
 export default function FormNewAppointment() {
 
-  const router = useRouter()
+  
 
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm()
+
+  const router = useRouter()
 
   const [showModal, setShowModal] = useState(false);
 
@@ -150,7 +152,7 @@ export default function FormNewAppointment() {
               <button
                 type="submit"
                 className="mt-10 w-9/12 active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all py-3 rounded-xl bg-violet-500 text-white text-lg font-bold"
-                onClick={() => router.push('/home')}
+                onClick={() => router.push('/')}
               >
                 Guardar
               </button>

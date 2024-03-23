@@ -17,7 +17,7 @@ const handler = NextAuth({
       async authorize(credentials, req) {
         const result = await userLoginAPI(credentials);
         console.log(result, 'result')
-        if (result.user) {
+        if (result) {
           return {
             user: result.user,
             jwt: result.token,

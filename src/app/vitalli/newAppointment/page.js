@@ -3,19 +3,18 @@ import React, { Fragment, useState } from "react"
 import { useForm } from "react-hook-form"
 import ModalReminder from "../../features/reminders/components/modalReminder"
 import AutocompleteAdressInput from "@/app/features/new-appointment/components/autocompleteAPI"
-import { useRouter } from "next/router"
+import { useRouter } from "next/navigation"
+
 
 export default function FormNewAppointment() {
 
-  
+  const history = useRouter()
 
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm()
-
-  const router = useRouter()
 
   const [showModal, setShowModal] = useState(false);
 
@@ -25,6 +24,7 @@ export default function FormNewAppointment() {
         <form
           onSubmit={handleSubmit((data) => {
             console.log(data)
+            history.push(`/vitalli/home`)
           })}
           className="bg-white px-10 py-20 rounded-3xl border-gray-100 mt-8 shadow-xl shadow-violet-500"
         >
@@ -152,7 +152,6 @@ export default function FormNewAppointment() {
               <button
                 type="submit"
                 className="mt-10 w-9/12 active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all py-3 rounded-xl bg-violet-500 text-white text-lg font-bold"
-                onClick={() => router.push('/')}
               >
                 Guardar
               </button>

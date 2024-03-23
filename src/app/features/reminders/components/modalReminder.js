@@ -109,6 +109,7 @@ const ModalReminder = ({ isVisible, onClose, children }) => {
               <button
                 type="submit"
                 className="w-full active:scale-[.98] active:duration-75 hover:scale-[1.01] easy-in-out transition-all py-2 rounded-xl bg-violet-500 text-white text-sm font-medium"
+                onClick={() => onClose()}
               >
                 Guardar
               </button>

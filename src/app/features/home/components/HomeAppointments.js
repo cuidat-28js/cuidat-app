@@ -114,24 +114,24 @@ export default function HomeAppointments() {
                   <p className="font-bold">
                     Doctor:
                     <span className="font-normal">
-                      {appo.doctors_name} - {appo.type_of_specilist}
+                      {" "} {appo.doctors_name} - {appo.type_of_specilist}
                     </span>
                   </p>
                   <p className="font-bold">
                     Sintomas:
-                    <span className="font-normal">{appo.symptoms}</span>
+                    <span className="font-normal">{" "} {appo.symptoms}</span>
                   </p>
                   <p className="font-bold">
                     Diagnostico:
-                    <span className="font-normal">{appo.diagnosis}</span>
+                    <span className="font-normal">{" "} {appo.diagnosis}</span>
                   </p>
                   <p className="font-bold">
                     Medicamento:
-                    <span className="font-normal">{appo.medicine}</span>
+                    <span className="font-normal">{" "} {appo.medicine}</span>
                   </p>
                   <p className="font-bold">
                     Ubicacion:
-                    <span className="font-normal">{appo.adress}</span>
+                    <span className="font-normal">{" "} {appo.adress}</span>
                   </p>
                   <p className="font-bold">
                     Observaciones:

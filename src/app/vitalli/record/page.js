@@ -1,8 +1,12 @@
-'use client'
+"use client";
 import React from "react";
-import EmptyRecord from "../../features/home/components/EmptyRecord";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Allergies from "@/app/features/record/components/allergies";
+import Medicine from "@/app/features/record/components/medicine";
+import ChronicDesease from "@/app/features/record/components/chronicDesease";
+import ContactEmergency from "@/app/features/record/components/contactEmergency";
+import FamilyHistoryRedord from "@/app/features/record/components/familyHistoryRecord";
+import BloodGroup from "@/app/features/record/components/bloodGroup";
 
 export default function Expediente() {
   const router = useRouter();
@@ -27,15 +31,7 @@ export default function Expediente() {
                   Grupo Sanguineo
                 </h3>
               </div>
-              <div className="flex flex-row justify-center">
-                <Image
-                  src="../record/blood.svg"
-                  alt="blood-drop"
-                  width={30}
-                  height={40}
-                />
-                <EmptyRecord />
-              </div>
+              <BloodGroup />
             </div>
           </div>
           {/* END block */}
@@ -46,15 +42,7 @@ export default function Expediente() {
                   Alergias
                 </h3>
               </div>
-              <div className="flex flex-row justify-center">
-                <Image
-                  src="../record/sick.svg"
-                  alt="sick emoji"
-                  width={40}
-                  height={50}
-                />
-                <EmptyRecord />
-              </div>
+              <Allergies />
             </div>
           </div>
           {/* END block */}
@@ -65,15 +53,7 @@ export default function Expediente() {
                   Enfermedades Cronicas
                 </h3>
               </div>
-              <div className="flex flex-row justify-center">
-                <Image
-                  src="../record/heart.svg"
-                  alt="heart icon"
-                  width={30}
-                  height={30}
-                />
-                <EmptyRecord />
-              </div>
+              <ChronicDesease />
             </div>
           </div>
           {/* END block */}
@@ -84,15 +64,7 @@ export default function Expediente() {
                   Medicamento Controlado
                 </h3>
               </div>
-              <div className="flex flex-row justify-center">
-                <Image
-                  src="../record/medicine.svg"
-                  alt="medicine"
-                  width={40}
-                  height={50}
-                />
-                <EmptyRecord />
-              </div>
+              <Medicine />
             </div>
           </div>
           {/* END block */}
@@ -103,15 +75,7 @@ export default function Expediente() {
                   Antecedentes Familiares
                 </h3>
               </div>
-              <div className="flex flex-row justify-center">
-                <Image
-                  src="../record/family.svg"
-                  alt="family"
-                  width={40}
-                  height={50}
-                />
-                <EmptyRecord />
-              </div>
+              <FamilyHistoryRedord />
             </div>
           </div>
 
@@ -122,26 +86,17 @@ export default function Expediente() {
                   Contacto de Emergencia
                 </h3>
               </div>
-              <div className="flex flex-row justify-center">
-                <Image
-                  src="../record/contact.svg"
-                  alt="contact"
-                  width={30}
-                  height={50}
-                />
-                <EmptyRecord />
-              </div>
+              <ContactEmergency />
             </div>
           </div>
           {/* END block */}
         </div>
-        {/* end row */}
 
         <div className="flex w-66 bg-white items-center mt-2 mb-6 md:mt-6">
           <button
             className="btn btn-wide btn-primary text-md md:text-lg hover:bg-white hover:border-primary hover:text-primary"
             type="button"
-            onClick={()=>router.push('/vitalli/recordForm')}
+            onClick={() => router.push("/vitalli/recordForm")}
           >
             Editar
           </button>

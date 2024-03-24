@@ -66,14 +66,14 @@ function NavBar() {
                   </Link>
                 </li>
                 <li className="pb-2  font-lato-regular text-violetVitalli py-2 px-6 text-center hover:text-violetVitalli hover:font-bold md:border-b-0 border-purple-900 md:hover:font-bold md:hover:bg-transparent md:text-xs lg:text-lg">
-                  <Link href="/login" onClick={() => setNavbar(!navbar)}>
+                  <Link href="/auth/login" onClick={() => setNavbar(!navbar)}>
                     Inicia Sesion
                   </Link>
                 </li>
                 <li className="pb-2 text-l font-lato-regular py-2 px-2 text-center md:border-b-0 md:hover:text-violetVitalli md:hover:bg-transparent">
                   <button
                     className="btn rounded-full bg-[#4D11AF]  text-[#ffff] hover:bg-[#4D11AF] hover:shadow-[#4D11AF] hover:border-[#4D11AF] md:text-xs lg:text-lg"
-                    onClick={() => router.push("/signin")}
+                    onClick={() => router.push("/auth/signin")}
                   >
                     ¡Registrate!
                   </button>
